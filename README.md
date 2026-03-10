@@ -24,7 +24,3 @@ Aprender a **probar software**, conceptos básicos de **redes de datos**, docume
 - Responsabilidad, comportamiento y conducta
 - Proyecto redes de datos (nota >= 7)
 
-## Actividades (Eje 1)
-- `Eje_1_Software_Colaborativo/1-1_Crear_Carpetas_Archivos_GUI_CMD.md`
-- `Eje_1_Software_Colaborativo/1-2_Batch_Bash.md`
-- `Eje_1_Software_Colaborativo/1-3_Google_Sheets_Colaborativo.md`
