@@ -1,0 +1,7 @@
+# Ignore local reference and supplemental material
+material_complementario/
+old/
+
+# OS / editor
+.DS_Store
+Thumbs.db
