@@ -8,10 +8,34 @@ Organizar las carpetas del curso y practicar comandos básicos de Windows.
 - En Windows hay dos opciones comunes: **CMD** y **PowerShell**.
 - CMD es más simple; PowerShell es más potente y usa cmdlets.
 - Siempre hay un **directorio actual** (la carpeta en la que estás parado).
+- El **CMD** (Símbolo del sistema) viene con Windows y permite ejecutar comandos para tareas avanzadas.
+
+## Comandos básicos (CMD y Linux)
+| Propósito | WINDOWS | LINUX | Ejemplo básico de Linux |
+|----|----|----|----|
+| Ayuda sobre comandos | cmd /? | man cmd | man comando |
+| Crear un directorio | mkdir | mkdir | mkdir /home/qdirectorio |
+| Cambiar a un directorio | cd | cd | cd /home/qdirectorio |
+| Subir un directorio | cd .. | cd .. | |
+| Listar directorio | dir | ls -ls | |
+| Borrar pantalla | cls | clear | |
+| Cerrar ventana | exit | exit | |
+| Borrar un directorio | rmdir | rmdir | rmdir /home/qdirectorio |
+| Mostrar un archivo | more | more | more qfichero |
+| Renombrar archivo | rename | mv | mv nombreold nombrenew |
+| Copiar archivos | copy | cp | cp qfichero.txt /home/qdirectorio |
+| Mover archivos | move | mv | mv qfichero.txt /home/qdirectorio |
+| Mostrar fecha | date | date | |
+| Mostrar hora | time | date | |
+| Borrar archivos | del | rm | rm qfichero.txt |
+| Buscar texto en archivo | find | grep | grep "contenido" qfichero.txt |
+| Crear un archivo | copy con | touch | touch newfichero.txt |
+| Ver salida estándar | echo | echo | echo Testing_QA |
 
 ## Video recomendado
 - Qué es una terminal: https://youtu.be/gN_0sWWV3CA
 - Comandos básicos CMD: http://youtube.com/watch?v=W6434nulBu8
+- Lectura recomendada: https://www.xataka.com/basics/comandos-basicos-para-dar-tus-primeros-pasos-consola-windows-cmd
 
 ## Actividad paso a paso
 
@@ -26,6 +50,8 @@ Organizar las carpetas del curso y practicar comandos básicos de Windows.
 5. Compartir el enlace con `jcsodo@escuelasproa.edu.ar`.
 
 ### Parte B: Línea de comandos (CMD)
+Comandos a usar: `cd`, `mkdir`, `dir`, `tree`, `copy con`, `type`, `notepad`.
+
 ```bat
 cd C:\
 mkdir temp2026
@@ -48,6 +74,7 @@ copy con README.txt
 (Ctrl+Z y Enter)
 cd ..
 dir
+tree C:\temp2026\Testing_APELLIDO /F
 ```
 
 ### Parte C: Línea de comandos (PowerShell)
@@ -70,6 +97,10 @@ Get-ChildItem
 - PowerShell trabaja con objetos y cmdlets (por ejemplo `Get-ChildItem`).
 - CMD usa comandos tradicionales (`dir`, `copy`, `type`).
 - PowerShell acepta alias como `dir` o `ls`, pero su salida es más rica.
+
+## Extensión opcional
+1. Editar cada `README.txt` con `notepad` y agregar una breve descripción del eje.
+2. Usar `type` para verificar el contenido de cada archivo.
 
 ## Entrega
 - Captura de pantalla del árbol de carpetas.

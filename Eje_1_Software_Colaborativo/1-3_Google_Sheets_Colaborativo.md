@@ -19,7 +19,7 @@ Google Workspace incluye herramientas para trabajar en equipo. Usaremos **Google
 5. Completar 5 filas con datos de ejemplo.
 
 ## Actividad 2 (individual): Recibo simple
-1. En el mismo archivo `testing2026_APELLIDO`, crear una nueva hoja llamada `Recibo`.
+1. En la mismo archivo `testing2026_APELLIDO`, crear una nueva hoja llamada `Recibo`.
 2. Crear una tabla con estas columnas:
    - Cantidad | Producto | Precio U. | Subtotal
 3. Completar 5 productos con cantidades y precios en pesos.
