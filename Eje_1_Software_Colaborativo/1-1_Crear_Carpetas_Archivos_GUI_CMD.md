@@ -1,107 +1,198 @@
-# 1-1 Crear carpetas y archivos (GUI + CMD + PowerShell)
+# 1-1 Crear carpetas y archivos (GUI + PowerShell)
 
 ## Objetivo
-Organizar las carpetas del curso y practicar comandos básicos de Windows.
+Organizar una estructura de trabajo para la materia y practicar comandos básicos de terminal en Windows.
 
-## Teoría breve
-- La terminal permite trabajar con archivos y carpetas mediante comandos.
-- En Windows hay dos opciones comunes: **CMD** y **PowerShell**.
-- CMD es más simple; PowerShell es más potente y usa cmdlets.
-- Siempre hay un **directorio actual** (la carpeta en la que estás parado).
-- El **CMD** (Símbolo del sistema) viene con Windows y permite ejecutar comandos para tareas avanzadas.
+## Actividad previa online
+Antes de la clase presencial, hacé una exploración breve desde el navegador.
 
-## Comandos básicos (CMD y Linux)
-| Propósito | WINDOWS | LINUX | Ejemplo básico de Linux |
-|----|----|----|----|
-| Ayuda sobre comandos | cmd /? | man cmd | man comando |
-| Crear un directorio | mkdir | mkdir | mkdir /home/qdirectorio |
-| Cambiar a un directorio | cd | cd | cd /home/qdirectorio |
-| Subir un directorio | cd .. | cd .. | |
-| Listar directorio | dir | ls -ls | |
-| Borrar pantalla | cls | clear | |
-| Cerrar ventana | exit | exit | |
-| Borrar un directorio | rmdir | rmdir | rmdir /home/qdirectorio |
-| Mostrar un archivo | more | more | more qfichero |
-| Renombrar archivo | rename | mv | mv nombreold nombrenew |
-| Copiar archivos | copy | cp | cp qfichero.txt /home/qdirectorio |
-| Mover archivos | move | mv | mv qfichero.txt /home/qdirectorio |
-| Mostrar fecha | date | date | |
-| Mostrar hora | time | date | |
-| Borrar archivos | del | rm | rm qfichero.txt |
-| Buscar texto en archivo | find | grep | grep "contenido" qfichero.txt |
-| Crear un archivo | copy con | touch | touch newfichero.txt |
-| Ver salida estándar | echo | echo | echo Testing_QA |
+## Tiempo estimado
+- 10 a 15 minutos
 
-## Video recomendado
-- Qué es una terminal: https://youtu.be/gN_0sWWV3CA
-- Comandos básicos CMD: http://youtube.com/watch?v=W6434nulBu8
-- Lectura recomendada: https://www.xataka.com/basics/comandos-basicos-para-dar-tus-primeros-pasos-consola-windows-cmd
+## Opción 1: práctica online estilo Windows
+- **Windows Command Prompt Hub / CMD Master**: https://windows-cli.arnost.org/es/dashboard
 
-## Actividad paso a paso
+### Paso a paso
+1. Entrá al sitio.
+2. Elegí un ejercicio inicial.
+3. Intentá resolverlo usando comandos como:
+   - `dir`
+   - `cd`
+   - `mkdir`
+   - `move`
+   - `del`
+a probar.
 
-### Parte A: GUI (Explorador de archivos)
-1. Crear carpeta local: `C:\temp2026\Testing_APELLIDO`.
-2. Dentro, crear estas subcarpetas:
-   - `Eje_1_Software_Colaborativo`
-   - `Eje_2_Redes_de_Datos`
-   - `Eje_3_Testing`
-3. Crear un archivo de texto `README.txt` dentro de cada eje.
-4. Subir la carpeta `Testing_APELLIDO` a Google Drive institucional.
-5. Compartir el enlace con `jcsodo@escuelasproa.edu.ar`.
+### Qué tenés que mirar
+- qué comando escribiste
+- qué respuesta mostró la terminal
+- si el sistema aceptó el comando o mostró error
 
-### Parte B: Línea de comandos (CMD)
-Comandos a usar: `cd`, `mkdir`, `dir`, `tree`, `copy con`, `type`, `notepad`.
+## Opción 2: práctica online estilo Linux
+- **TryBash**: https://trybash.github.io/game/
+- **JSLinux**: https://bellard.org/jslinux/
+- **CMD Challenge**: https://cmdchallenge.com/
 
-```bat
-cd C:\
-mkdir temp2026
-cd temp2026
-mkdir Testing_APELLIDO
-cd Testing_APELLIDO
-mkdir Eje_1_Software_Colaborativo
-mkdir Eje_2_Redes_de_Datos
-mkdir Eje_3_Testing
-cd Eje_1_Software_Colaborativo
-copy con README.txt
-(Escribir una línea y presionar Ctrl+Z, luego Enter)
-cd ..
-cd Eje_2_Redes_de_Datos
-copy con README.txt
-(Ctrl+Z y Enter)
-cd ..
-cd Eje_3_Testing
-copy con README.txt
-(Ctrl+Z y Enter)
-cd ..
-dir
-tree C:\temp2026\Testing_APELLIDO /F
+Si usás **JSLinux**, probá esta secuencia:
+
+```bash
+pwd
+ls
+mkdir practica
+cd practica
+pwd
+echo "hola" > saludo.txt
+cat saludo.txt
 ```
 
-### Parte C: Línea de comandos (PowerShell)
+### Qué tenés que mirar
+- cómo saber en qué carpeta estás
+- cómo ver lo que hay dentro de una carpeta
+- cómo crear una carpeta nueva
+- cómo crear y leer un archivo
+
+## Mini entrega de la actividad previa
+Escribí una respuesta breve con estas tres partes:
+
+1. ¿Qué sitio usaste?
+2. ¿Qué comando recordás?
+3. ¿Qué te resultó más raro, más difícil o más interesante?
+
+### Pregunta para pensar
+Aunque esta terminal sea Linux y en clase usemos PowerShell, ¿qué comandos o ideas te parecieron parecidos?
+
+## Antes de empezar
+- Trabajá en **PowerShell**.
+- Usá una carpeta dentro de tu usuario (`$HOME`) y no en `C:\`.
+- Si trabajás en pareja, una persona escribe y la otra controla los pasos.
+
+## Idea clave
+La terminal trabaja sobre los mismos archivos y carpetas que ves en el Explorador. La diferencia es que en vez de hacer clic, vas a usar comandos.
+
+## Videos introductorios
+
+- **CMD vs PowerShell vs Windows Terminal**: https://www.youtube.com/watch?v=vj0xC4UOwi4 
+- **Sugerencias de terminal en VS Code**: https://learn.microsoft.com/es-es/shows/visual-studio-code/terminal-tips-in-vs-code
+- **PowerShell para principiantes**: https://learn.microsoft.com/es-es/shows/mvp-windows-and-devices-for-it/powershell-beginners
+
+-**Microaprendizaje: ¿Qué es una terminal o consola?**: https://www.youtube.com/watch?v=gN_0sWWV3CA
+- **¿Comó se usa la terminal?**: https://www.youtube.com/watch?v=kfEpjj2NZxU
+
+## Recurso complementario
+- **Primeros pasos con la terminal en VS Code**: https://code.visualstudio.com/docs/terminal/getting-started
+
+## Comandos de hoy
+
+| Acción | PowerShell | CMD | Linux / Git Bash |
+|---|---|---|---|
+| Ver dónde estoy | `pwd` | `cd` | `pwd` |
+| Ver qué hay | `ls` | `dir` | `ls` |
+| Entrar a una carpeta | `cd carpeta` | `cd carpeta` | `cd carpeta` |
+| Subir un nivel | `cd ..` | `cd ..` | `cd ..` |
+| Crear carpeta | `mkdir carpeta` | `mkdir carpeta` | `mkdir carpeta` |
+| Crear archivo con texto | `echo "texto" > archivo.txt` | `echo texto>archivo.txt` | `echo "texto" > archivo.txt` |
+| Ver archivo | `cat archivo.txt` | `type archivo.txt` | `cat archivo.txt` |
+| Mover o renombrar | `mv origen destino` | `move origen destino` | `mv origen destino` |
+| Borrar archivo | `rm archivo.txt` | `del archivo.txt` | `rm archivo.txt` |
+
+## Actividad 1: Crear tu carpeta de trabajo
+Abrí PowerShell y ejecutá:
+
 ```powershell
-cd C:\
-mkdir temp2026
-cd temp2026
-mkdir Testing_APELLIDO
-cd Testing_APELLIDO
+cd $HOME
+mkdir Testing2026_APELLIDO
+cd Testing2026_APELLIDO
+pwd
+ls
+```
+
+## Actividad 2: Armar la estructura de la materia
+Dentro de `Testing2026_APELLIDO`, creá estas carpetas:
+
+- `Eje_1_Software_Colaborativo`
+- `Eje_2_Redes_de_Datos`
+- `Eje_3_Testing`
+
+Usá estos comandos:
+
+```powershell
 mkdir Eje_1_Software_Colaborativo
 mkdir Eje_2_Redes_de_Datos
 mkdir Eje_3_Testing
-"Eje 1" | Set-Content .\Eje_1_Software_Colaborativo\README.txt
-"Eje 2" | Set-Content .\Eje_2_Redes_de_Datos\README.txt
-"Eje 3" | Set-Content .\Eje_3_Testing\README.txt
-Get-ChildItem
+ls
 ```
 
-## Diferencias clave CMD vs PowerShell
-- PowerShell trabaja con objetos y cmdlets (por ejemplo `Get-ChildItem`).
-- CMD usa comandos tradicionales (`dir`, `copy`, `type`).
-- PowerShell acepta alias como `dir` o `ls`, pero su salida es más rica.
+## Actividad 3: Crear archivos de documentación
+Creá un `README.md` dentro de cada eje:
 
-## Extensión opcional
-1. Editar cada `README.txt` con `notepad` y agregar una breve descripción del eje.
-2. Usar `type` para verificar el contenido de cada archivo.
+```powershell
+echo "# Eje 1" > .\Eje_1_Software_Colaborativo\README.md
+echo "# Eje 2" > .\Eje_2_Redes_de_Datos\README.md
+echo "# Eje 3" > .\Eje_3_Testing\README.md
+```
+
+Verificá el contenido de uno de los archivos:
+
+```powershell
+cat .\Eje_1_Software_Colaborativo\README.md
+```
+
+## Actividad 4: Ordenar un archivo
+Primero creá un archivo fuera de lugar:
+
+```powershell
+echo "borrador" > borrador.txt
+ls
+```
+
+Ahora movelo a `Eje_3_Testing` y renombralo como `notas_iniciales.txt`:
+
+```powershell
+mv .\borrador.txt .\Eje_3_Testing\notas_iniciales.txt
+ls .\Eje_3_Testing
+```
+
+## Actividad 5: Limpieza controlada
+Creá un archivo temporal:
+
+```powershell
+echo "basura" > archivo.tmp
+ls
+```
+
+Borrá el archivo temporal:
+
+```powershell
+rm .\archivo.tmp
+ls
+```
+
+## Desafío extra
+Respondé por escrito:
+
+1. ¿Qué comando te dice en qué carpeta estás?
+2. ¿Qué comando te muestra qué hay en una carpeta?
+3. ¿Qué diferencia encontraste entre usar GUI y usar terminal?
+
+## Cómo hacer la captura en Windows
+La forma más simple es esta:
+
+1. Dejá abierta la ventana que querés mostrar.
+2. Presioná `Win + Shift + S`.
+3. Elegí la opción de recorte rectangular.
+4. Seleccioná con el mouse la parte de la pantalla que querés capturar.
+5. Pegá la captura con `Ctrl + V` en un documento, un chat o donde te la pidan.
+
+### Qué conviene mostrar en la captura
+Para esta actividad alcanza con que se vea una de estas dos opciones:
+
+- la carpeta `Testing2026_APELLIDO` con sus tres ejes
+- la ventana de PowerShell mostrando los comandos ejecutados y el resultado
 
 ## Entrega
-- Captura de pantalla del árbol de carpetas.
-- Enlace compartido de la carpeta en Drive.
+- Captura de la carpeta `Testing2026_APELLIDO` con sus tres ejes.
+- Captura o copia de los comandos usados.
+- Respuestas del desafío extra.
+
+### Extra
+https://overthewire.org/

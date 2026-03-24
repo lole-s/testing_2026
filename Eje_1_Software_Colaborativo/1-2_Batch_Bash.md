@@ -1,52 +1,101 @@
-# 1-2 Batch y Bash
+# 1-2 Automatización inicial: Batch y Bash
 
 ## Objetivo
-Conocer qué es un script Batch en Windows y qué es Bash en sistemas Unix. Crear y ejecutar scripts simples.
+Entender qué es un script y usarlo para automatizar tareas repetitivas de organización de archivos y carpetas.
 
-## Teoría breve
-- **Batch**: archivos `.bat` o `.cmd` que ejecutan comandos en CMD.
-- **Bash**: shell de sistemas Unix (Linux/macOS) que ejecuta scripts `.sh`.
-- Batch es propio de Windows; Bash es común en Linux y Git Bash.
+## Idea clave
+Si una secuencia de comandos se repite muchas veces, conviene guardarla en un archivo para poder ejecutarla cuando haga falta.
 
-## Videos recomendados
-- Ejemplo Batch: https://www.youtube.com/watch?v=uTQD5hAKURg
-- Programación Bash: https://www.youtube.com/watch?v=0tIZhTAuNuU
+## Qué vas a usar
+- **Batch** (`.bat`) en Windows
+- **Bash** (`.sh`) como referencia para Linux o Git Bash
 
-## Actividad paso a paso
+## Actividad 1: Crear la carpeta de scripts
+Abrí PowerShell y ubicáte en tu carpeta de trabajo:
 
-### Parte A: Scripts Batch (CMD)
-1. Crear carpeta `C:\temp2026\scripts`.
-2. Crear `hola.bat` con este contenido:
+```powershell
+cd $HOME\Testing2026_APELLIDO
+mkdir scripts
+cd scripts
+pwd
+```
+
+## Actividad 2: Crear un script Batch
+Creá un archivo llamado `preparar_entorno.bat` con este contenido:
+
 ```bat
 @echo off
-echo Hola, Testing 2026
-pause
-```
-3. Ejecutar el script desde CMD:
-```bat
-cd C:\temp2026\scripts
-hola.bat
-```
-4. Crear `fecha.bat` para mostrar fecha y hora:
-```bat
-@echo off
-echo Fecha: %date%
-echo Hora: %time%
+mkdir proyecto_demo
+cd proyecto_demo
+mkdir docs
+mkdir src
+mkdir tests
+echo # Proyecto demo > README.md
+echo Entorno inicial creado
+dir
 pause
 ```
 
-### Parte B: Scripts Bash (solo si tenés Git Bash o WSL)
-1. Crear `hola.sh` con este contenido:
+## Actividad 3: Ejecutar el script
+Ejecutá el archivo desde PowerShell:
+
+```powershell
+.\preparar_entorno.bat
+```
+
+## Actividad 4: Verificar el resultado
+Entrá en la carpeta creada y comprobá su contenido:
+
+```powershell
+cd .\proyecto_demo
+ls
+cat .\README.md
+```
+
+La estructura final debería quedar así:
+
+```text
+proyecto_demo
+|-- docs
+|-- src
+|-- tests
+|-- README.md
+```
+
+## Actividad 5: Leer el equivalente en Bash
+Leé este script y comparalo con el anterior:
+
 ```bash
 #!/usr/bin/env bash
-echo "Hola desde Bash"
-```
-2. Ejecutar:
-```bash
-cd /c/temp2026/scripts
-bash hola.sh
+mkdir proyecto_demo
+cd proyecto_demo
+mkdir docs
+mkdir src
+mkdir tests
+echo "# Proyecto demo" > README.md
+echo "Entorno inicial creado"
+ls
 ```
 
+## Comparación rápida
+
+| Idea | Batch (`.bat`) | Bash (`.sh`) |
+|---|---|---|
+| Crear carpetas | `mkdir` | `mkdir` |
+| Cambiar de carpeta | `cd` | `cd` |
+| Crear README | `echo texto > archivo` | `echo "texto" > archivo` |
+| Ver contenido | `dir` | `ls` |
+
 ## Entrega
-- Captura de pantalla ejecutando `hola.bat` y `fecha.bat`.
-- Si hiciste Bash, captura de `hola.sh`.
+- Captura ejecutando `preparar_entorno.bat`.
+- Captura o evidencia de la carpeta `proyecto_demo`.
+- Explicación breve: ¿qué ventaja tiene guardar varios comandos en un script?
+
+
+### Videos
+- **Descubre Qué es la SHELL de LINUX y BASH (Terminal) en 5 Minutos!!**: https://www.youtube.com/watch?v=YUCXzp8n93U
+- **¿Qué es Bash y para que sirven los Bash Scripts?**: https://www.youtube.com/watch?v=0tIZhTAuNuU
+- **Bash: Explicado Fácilmente en 3 minutos**: https://www.youtube.com/watch?v=EKFK83mNsyo
+
+#### Extra: 
+**Learn Shell**: https://www.learnshell.org/

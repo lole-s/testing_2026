@@ -1,6 +1,7 @@
 # Ignore local reference and supplemental material
 material_complementario/
 old/
+Eje_1_Software_Colaborativo/_GUIA_DOCENTE_EJE_1_Software_Colaborativo.md
 
 # OS / editor
 .DS_Store
