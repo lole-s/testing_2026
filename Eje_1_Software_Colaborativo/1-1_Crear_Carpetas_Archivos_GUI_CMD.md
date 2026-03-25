@@ -4,24 +4,11 @@
 Organizar una estructura de trabajo para la materia y practicar comandos básicos de terminal en Windows.
 
 ## Actividad previa online
-Antes de la clase presencial, hacé una exploración breve desde el navegador.
-
-## Tiempo estimado
-- 10 a 15 minutos
+Antes de las actividares para crear carpetas/archivos localmente en la computadora vamos a hace runa clase introductoria con una exploración breve de estos conceptos desdeel navegador.
 
 ## Opción 1: práctica online estilo Windows
-- **Windows Command Prompt Hub / CMD Master**: https://windows-cli.arnost.org/es/dashboard
 
-### Paso a paso
-1. Entrá al sitio.
-2. Elegí un ejercicio inicial.
-3. Intentá resolverlo usando comandos como:
-   - `dir`
-   - `cd`
-   - `mkdir`
-   - `move`
-   - `del`
-a probar.
+- [**Windows Command Prompt Hub / CMD Master**](https://windows-cli.arnost.org/es/dashboard)
 
 ### Qué tenés que mirar
 - qué comando escribiste
@@ -29,9 +16,10 @@ a probar.
 - si el sistema aceptó el comando o mostró error
 
 ## Opción 2: práctica online estilo Linux
-- **TryBash**: https://trybash.github.io/game/
-- **JSLinux**: https://bellard.org/jslinux/
-- **CMD Challenge**: https://cmdchallenge.com/
+- [**TryBash**](https://trybash.github.io/game/)  (RECOMENDADA)
+
+- [**JSLinux**](https://bellard.org/jslinux/)
+- [**CMD Challenge**](https://cmdchallenge.com/)
 
 Si usás **JSLinux**, probá esta secuencia:
 
@@ -61,25 +49,16 @@ Escribí una respuesta breve con estas tres partes:
 ### Pregunta para pensar
 Aunque esta terminal sea Linux y en clase usemos PowerShell, ¿qué comandos o ideas te parecieron parecidos?
 
-## Antes de empezar
-- Trabajá en **PowerShell**.
-- Usá una carpeta dentro de tu usuario (`$HOME`) y no en `C:\`.
-- Si trabajás en pareja, una persona escribe y la otra controla los pasos.
+# ACTIVIDADES OFFLINE en PC
 
 ## Idea clave
 La terminal trabaja sobre los mismos archivos y carpetas que ves en el Explorador. La diferencia es que en vez de hacer clic, vas a usar comandos.
 
-## Videos introductorios
 
-- **CMD vs PowerShell vs Windows Terminal**: https://www.youtube.com/watch?v=vj0xC4UOwi4 
-- **Sugerencias de terminal en VS Code**: https://learn.microsoft.com/es-es/shows/visual-studio-code/terminal-tips-in-vs-code
-- **PowerShell para principiantes**: https://learn.microsoft.com/es-es/shows/mvp-windows-and-devices-for-it/powershell-beginners
+## Antes de empezar
 
--**Microaprendizaje: ¿Qué es una terminal o consola?**: https://www.youtube.com/watch?v=gN_0sWWV3CA
-- **¿Comó se usa la terminal?**: https://www.youtube.com/watch?v=kfEpjj2NZxU
-
-## Recurso complementario
-- **Primeros pasos con la terminal en VS Code**: https://code.visualstudio.com/docs/terminal/getting-started
+- Trabajá en **PowerShell**.
+- Usá una carpeta en `C:\temp2026`.
 
 ## Comandos de hoy
 
@@ -99,7 +78,9 @@ La terminal trabaja sobre los mismos archivos y carpetas que ves en el Explorado
 Abrí PowerShell y ejecutá:
 
 ```powershell
-cd $HOME
+cd /
+mkdir temp2026
+cd temp2026
 mkdir Testing2026_APELLIDO
 cd Testing2026_APELLIDO
 pwd
@@ -138,9 +119,12 @@ cat .\Eje_1_Software_Colaborativo\README.md
 ```
 
 ## Actividad 4: Ordenar un archivo
-Primero creá un archivo fuera de lugar:
+Primero creá un archivo en el HOME del USUARIO:
 
 ```powershell
+echo $HOME
+cd $HOME/Desktop
+ls
 echo "borrador" > borrador.txt
 ls
 ```
@@ -167,13 +151,19 @@ rm .\archivo.tmp
 ls
 ```
 
-## Desafío extra
-Respondé por escrito:
+## Mini Entrega 1-1 (2)
+En el mismo archivo que ayer, respondé por escrito:
 
 1. ¿Qué comando te dice en qué carpeta estás?
 2. ¿Qué comando te muestra qué hay en una carpeta?
-3. ¿Qué diferencia encontraste entre usar GUI y usar terminal?
+3. ¿Qué diferencia encontras entre usar GUI y usar terminal?
+4. Pegar una captura de pantalla del árbol de la carpeta `temp2026` que crearte
 
+```powershell
+C:\temp2026
+```
+   
+      
 ## Cómo hacer la captura en Windows
 La forma más simple es esta:
 
@@ -181,18 +171,21 @@ La forma más simple es esta:
 2. Presioná `Win + Shift + S`.
 3. Elegí la opción de recorte rectangular.
 4. Seleccioná con el mouse la parte de la pantalla que querés capturar.
-5. Pegá la captura con `Ctrl + V` en un documento, un chat o donde te la pidan.
+5. Pegá la captura con `Ctrl + V` en un documento
 
-### Qué conviene mostrar en la captura
-Para esta actividad alcanza con que se vea una de estas dos opciones:
-
-- la carpeta `Testing2026_APELLIDO` con sus tres ejes
-- la ventana de PowerShell mostrando los comandos ejecutados y el resultado
-
-## Entrega
-- Captura de la carpeta `Testing2026_APELLIDO` con sus tres ejes.
-- Captura o copia de los comandos usados.
-- Respuestas del desafío extra.
-
-### Extra
+### ACTIVIDAD Extra (SSH)
 https://overthewire.org/
+
+## Videos complementarios
+
+- [**Microaprendizaje: ¿Qué es una terminal o consola?**](https://www.youtube.com/watch?v=gN_0sWWV3CA)
+- [**CMD vs Powershell desde cero**](https://www.youtube.com/watch?v=dJSYTJMU4GQ&t)
+- [**Bash: Explicado Fácilmente en 3 minutos**](https://www.youtube.com/watch?v=EKFK83mNsyo)
+
+- [**Sugerencias de terminal en VS Code**](https://learn.microsoft.com/es-es/shows/visual-studio-code/terminal-tips-in-vs-code)
+- [**PowerShell para principiantes**](https://learn.microsoft.com/es-es/shows/mvp-windows-and-devices-for-it/powershell-beginners)
+
+- [**¿Qué es la SHELL de LINUX y BASH?**](https://www.youtube.com/watch?v=YUCXzp8n93U)
+
+## Recurso complementario
+- [**Primeros pasos con la terminal en VS Code**](https://code.visualstudio.com/docs/terminal/getting-started)
