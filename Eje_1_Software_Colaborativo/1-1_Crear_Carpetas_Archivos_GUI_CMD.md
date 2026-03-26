@@ -132,8 +132,8 @@ ls
 Ahora movelo a `Eje_3_Testing` y renombralo como `notas_iniciales.txt`:
 
 ```powershell
-mv .\borrador.txt .\Eje_3_Testing\notas_iniciales.txt
-ls .\Eje_3_Testing
+mv .\borrador.txt C:\>temp2026\Testing_APELLIDO\Eje_3_Testing\notas_iniciales.txt
+ls -al C:\>temp2026\Testing_APELLIDO\Eje_3_Testing\Eje_3_Testing\
 ```
 
 ## Actividad 5: Limpieza controlada
