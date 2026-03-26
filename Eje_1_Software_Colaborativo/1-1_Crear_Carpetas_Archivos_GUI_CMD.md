@@ -160,7 +160,7 @@ En el mismo archivo que ayer, respondé por escrito:
 4. Pegar una captura de pantalla del árbol de la carpeta `temp2026` que crearte
 
 ```powershell
-C:\temp2026
+tree C:\temp2026
 ```
    
       
