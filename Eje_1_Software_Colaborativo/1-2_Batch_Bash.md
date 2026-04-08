@@ -211,13 +211,6 @@ goto inicio
 - `timeout /t 1` espera 1 segundo
 - `cls` limpia la pantalla para que parezca que el reloj se actualiza
 
-### Variante divertida
-Cambiale el título y el mensaje para convertirlo en:
-
-- un reloj de recreo
-- un reloj "modo streaming"
-- un reloj "Se vemo en Disney"
-
 ## Desafíos para resolver consultando con IA
 La idea no es copiar y pegar sin pensar. La idea es pedir ayuda, probar, corregir y entender qué cambió.
 
