@@ -131,7 +131,7 @@ Video link: [¿Por qué debes aprender MARKDOWN? MoureDev by Brias Moure](https:
     # Apunte de Markdown para trabajo colaborativo
 
     **Nombre y apellido:** TU_NOMBRE
-    **Curso:** 5to año
+    **Curso:** 6to año
 
     ## Qué es Markdown
 
@@ -193,3 +193,4 @@ Video link: [¿Por qué debes aprender MARKDOWN? MoureDev by Brias Moure](https:
     * Subir el archivo `Testing-markdown-vsc.md` a la carpeta del Drive `testing_APELLIDO/eje1_Software_Colaborativo`.
     * Si se pudo exportar, subir también la versión PDF.
     * Compartir una captura de pantalla donde se vea VS Code con el texto y la previsualización.
+    (Herramienta de recorte, Presionar: Windows + Shift + S)
