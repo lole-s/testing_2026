@@ -69,10 +69,10 @@ Fecha:
 
 Elegir uno de estos temas:
 
-- ¿Para qué sirve documentar un proyecto?
-- ¿Qué ventajas tiene trabajar con archivos ordenados?
-- ¿Por qué una materia técnica necesita trabajo colaborativo?
-- ¿Qué diferencias hay entre un apunte desordenado y uno claro?
+- ¿Por qué en informática no alcanza con que algo "parezca" funcionar?
+- ¿Qué hace que una explicación técnica sea clara y fácil de entender?
+- ¿Cómo influye la organización de archivos en un proyecto digital?
+- ¿Qué aporta el trabajo en equipo cuando se desarrolla un proyecto tecnológico?
 
 Escribir una primera versión con:
 
@@ -139,7 +139,6 @@ Responder con sus palabras:
 2. ¿Qué ventaja tiene poder mirar versiones anteriores?
 3. ¿Qué cambio del grupo fue más útil para mejorar el documento?
 4. ¿En qué se parece esto a trabajar sobre un proyecto de software?
-5. ¿Por qué esta idea puede ser importante antes de aprender Git?
 
 ## Evidencia de trabajo
 
@@ -169,8 +168,6 @@ En la próxima parte del eje vamos a ver una herramienta pensada específicament
   - https://support.google.com/docs/answer/190843
 - Google Drive: actividad y versiones de archivos
   - https://support.google.com/drive/answer/2409045?hl=es
-- Libro oficial de Git en español: control de versiones
-  - https://git-scm.com/book/es/v2/Inicio---Sobre-el-Control-de-Versiones-Acerca-del-Control-de-Versiones
 
 ## Pregunta final para pensar
 
