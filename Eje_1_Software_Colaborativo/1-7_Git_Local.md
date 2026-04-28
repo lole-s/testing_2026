@@ -15,15 +15,24 @@ No trabaja sobre ideas abstractas: trabaja sobre archivos reales.
 
 En esta clase vamos a trabajar solo con **Git local**.
 
-## Video sugerido
+## Material de apoyo
 - [Git explicado en forma simple](https://www.youtube.com/watch?v=3GymExBkKjE)
 - [Curso de Git y GitHub desde cero - introducción](https://www.youtube.com/watch?v=HiXLkL42tMU)
+- [Curso de Git - playlist de Felipe Gavilan Programa](https://www.youtube.com/playlist?list=PL0kIvpOlieSO0s8RI-1YJPMztAJ7TsUco)
+
+Cómo usar los videos en esta clase:
+
+- si el video explica conceptos, usarlo como apoyo teórico antes de practicar
+- si el video muestra comandos, pausarlo y repetir los pasos en la propia computadora
+- si aparece un comando que todavía no vimos, anotarlo y volver a esta guía
 
 ## Sitio oficial
 - [Git SCM](https://git-scm.com/)
 - [Libro oficial de Git en español](https://git-scm.com/book/es/v2)
 
 ## Instalación en Windows
+
+Antes de instalar, se puede mirar un video corto de la playlist para reconocer la herramienta y la pantalla de instalación. La instalación se hace siguiendo esta guía paso a paso.
 
 1. Ir a [https://git-scm.com/downloads](https://git-scm.com/downloads)
 2. Descargar la versión para Windows.
@@ -73,6 +82,17 @@ Para revisar la configuración:
 ```powershell
 git config --global --list
 ```
+
+## Cómo trabajar con la guía y los videos
+
+Esta clase tiene dos tipos de momentos:
+
+- **momento teórico**: mirar una explicación corta para entender qué problema resuelve cada comando
+- **momento práctico**: ejecutar los comandos, observar la salida y registrar evidencias
+
+Cuando el video muestre una acción práctica, no alcanza con verlo: hay que repetirla en terminal.
+
+La guía escrita manda sobre la actividad: si el video usa otra carpeta, otro nombre de archivo u otro sistema operativo, seguir los nombres y rutas de esta clase.
 
 ## Actividad 1: crear un proyecto local
 

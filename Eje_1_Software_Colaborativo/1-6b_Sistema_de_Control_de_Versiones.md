@@ -61,6 +61,38 @@ No. También se puede usar para:
 ## Video sugerido
 - [¿Qué es el control de versiones y por qué es importante?](https://www.youtube.com/watch?v=8HSjmgeJxqg)
 
+## Antes de Git: principios del SCM
+
+Antes de usar comandos, conviene entender algunos principios de esta forma de trabajar.
+
+SCM significa **Source Code Management**. Se puede traducir como **gestión del código fuente**.
+
+Un SCM no es solamente una herramienta para "guardar archivos". Es una forma de organizar el trabajo técnico para que el proyecto tenga memoria.
+
+Sus principios principales son:
+
+- **historial**: cada cambio importante queda registrado
+- **autoría**: se puede saber quién hizo un cambio
+- **mensaje**: cada cambio debería explicar por qué se hizo
+- **comparación**: se puede ver qué cambió entre dos versiones
+- **recuperación**: se puede volver a un estado anterior
+- **colaboración**: varias personas pueden trabajar con menos riesgo de pisarse
+
+En proyectos de software, estos principios son fundamentales porque el código cambia todo el tiempo.
+
+## Actividad complementaria
+Para entender de dónde viene Git, la próxima actividad propone armar una línea de tiempo colaborativa:
+
+- Unix
+- GNU
+- software libre
+- Minix
+- Linux
+- BitKeeper
+- Git
+
+La idea es entender que Git nació como respuesta a una necesidad concreta dentro de un proyecto enorme: coordinar cambios en el kernel Linux.
+
 ## Del concepto a la herramienta
 En este eje vamos a usar **Git**, que es uno de los sistemas de control de versiones más usados en el mundo del software.
 
