@@ -5,10 +5,9 @@ Reconstruir la historia desde Unix hasta Git entendiendo por qué cada hito fue 
 
 ## Organización
 
-- **Curso:** 5to/6to año - Informática
 - **Tiempo:** 20 min de investigación grupal + 2 min de exposición por grupo
 - **Grupos:** 9 grupos de 3 estudiantes
-- **Producción:** una explicación breve para armar entre todos una línea de tiempo
+- **Producción:** evidencias detalladas y una explicación breve para armar entre todos una línea de tiempo
 
 ## Idea clave
 Git no apareció de la nada.
@@ -70,9 +69,8 @@ El archivo puede ser:
 
 - un documento de Google Docs
 - un archivo Markdown (`.md`)
-- un PDF exportado desde el documento
 
-Nombre sugerido:
+Nombre Obligatorio:
 
 ```text
 1-6c_linea_tiempo_grupo_NOMBRE_DEL_HITO_APELLIDOS
@@ -86,6 +84,7 @@ El archivo debe incluir:
 - conexión con el hito anterior
 - conexión con el hito siguiente
 - fuentes consultadas
+- texto de 2min para exposición 
 - una frase final: `Nuestro hito fue importante porque...`
 
 ## Hitos y preguntas guía
@@ -104,7 +103,7 @@ El archivo debe incluir:
 
 ### Grupo 3: 1985 - Manifiesto GNU y Free Software Foundation
 
-1. ¿Qué pedía el Manifiesto GNU? ¿A quién estaba dirigido?
+1. ¿Qué pedía el Manifiesto GNU? ¿A quién estaba dirigido? ¿que significa GNU?
 2. ¿Para qué se creó la FSF? ¿Qué diferencia hay entre "free software" y "software gratis"?
 3. ¿Qué herramientas importantes creó GNU antes de 1991? Nombrar 3.
 
