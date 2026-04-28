@@ -140,7 +140,7 @@ El archivo debe incluir:
 ### Grupo 9: 2005 - Nace Git, Linus Torvalds
 
 1. ¿Qué pasó en abril de 2005 con BitKeeper? ¿Por qué Linux se quedó sin herramienta?
-2. ¿Qué objetivos de diseño tenía Git? Nombrar 3: velocidad, trabajo distribuido, integridad, ramas, etc.
+2. ¿Qué objetivos de diseño tenía Git? Nombrar 3
 3. ¿Por qué Linus lo programó tan rápido? ¿Qué necesitaba resolver urgente?
 
 ## Puesta en común
