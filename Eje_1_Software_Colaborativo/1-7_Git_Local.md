@@ -15,24 +15,17 @@ No trabaja sobre ideas abstractas: trabaja sobre archivos reales.
 
 En esta clase vamos a trabajar solo con **Git local**.
 
-## Material de apoyo
+## Material Complementario
 - [Git explicado en forma simple](https://www.youtube.com/watch?v=3GymExBkKjE)
 - [Curso de Git y GitHub desde cero - introducción](https://www.youtube.com/watch?v=HiXLkL42tMU)
 - [Curso de Git - playlist de Felipe Gavilan Programa](https://www.youtube.com/playlist?list=PL0kIvpOlieSO0s8RI-1YJPMztAJ7TsUco)
 
-Cómo usar los videos en esta clase:
-
-- si el video explica conceptos, usarlo como apoyo teórico antes de practicar
-- si el video muestra comandos, pausarlo y repetir los pasos en la propia computadora
-- si aparece un comando que todavía no vimos, anotarlo y volver a esta guía
 
 ## Sitio oficial
 - [Git SCM](https://git-scm.com/)
 - [Libro oficial de Git en español](https://git-scm.com/book/es/v2)
 
 ## Instalación en Windows
-
-Antes de instalar, se puede mirar un video corto de la playlist para reconocer la herramienta y la pantalla de instalación. La instalación se hace siguiendo esta guía paso a paso.
 
 1. Ir a [https://git-scm.com/downloads](https://git-scm.com/downloads)
 2. Descargar la versión para Windows.
@@ -46,12 +39,12 @@ Después de instalarlo, Git puede usarse de varias formas:
 - desde **PowerShell**
 - desde la terminal integrada de **VS Code**
 
-Para este eje conviene seguir usando **PowerShell** o la terminal de **VS Code**, así hay continuidad con las clases anteriores.
+En estos primeros pasos usaremos la terminal **Git Bash**
 
 ## Verificar la instalación
-Abrí una terminal y ejecutá:
+Abrí una terminal, click derecho en la carpeta de trabajo, seleccioná _Git Bash Here_ y ejecutá:
 
-```powershell
+```bash
 git --version
 git --help
 ```
@@ -72,41 +65,30 @@ Si Git está bien instalado, el primer comando debería mostrar una versión.
 ## Configuración inicial recomendada
 Antes del primer commit, conviene configurar nombre y correo.
 
-```powershell
+```bash
 git config --global user.name "Tu Nombre"
 git config --global user.email "tunombre@ejemplo.com"
 ```
 
 Para revisar la configuración:
 
-```powershell
+```bash
 git config --global --list
 ```
-
-## Cómo trabajar con la guía y los videos
-
-Esta clase tiene dos tipos de momentos:
-
-- **momento teórico**: mirar una explicación corta para entender qué problema resuelve cada comando
-- **momento práctico**: ejecutar los comandos, observar la salida y registrar evidencias
-
-Cuando el video muestre una acción práctica, no alcanza con verlo: hay que repetirla en terminal.
-
-La guía escrita manda sobre la actividad: si el video usa otra carpeta, otro nombre de archivo u otro sistema operativo, seguir los nombres y rutas de esta clase.
 
 ## Actividad 1: crear un proyecto local
 
 ### Paso 1: crear carpeta
 
-```powershell
-cd C:\temp2026\Testing2026_APELLIDO\Eje_1_Software_Colaborativo
+```bash
+cd /c/temp2026/Testing2026_APELLIDO/Eje_1_Software_Colaborativo
 mkdir mi_primer_repo_git
-cd .\mi_primer_repo_git
+cd mi_primer_repo_git
 ```
 
 ### Paso 2: inicializar Git
 
-```powershell
+```bash
 git init
 ```
 
@@ -115,17 +97,24 @@ Git creó una carpeta oculta llamada `.git` dentro del proyecto.
 
 Esa carpeta guarda el historial del repositorio.
 
+verificar la existencia de `.git` con: 
+
+```bash
+ls -a 
+```
+
+
 ## Actividad 2: crear un archivo y mirar el estado
 
 ### Paso 1: crear `README.md`
 
-```powershell
+```bash
 echo "# Mi primer repositorio Git" > README.md
 ```
 
 ### Paso 2: revisar el estado
 
-```powershell
+```bash
 git status
 ```
 
@@ -138,46 +127,52 @@ git status
 
 ### Paso 1: pasar el archivo al área de preparación
 
-```powershell
+```bash
 git add README.md
 ```
 
 ### Paso 2: guardar una versión
 
-```powershell
+```bash
 git commit -m "Agrego README inicial"
 ```
 
 ### Paso 3: ver el historial
 
-```powershell
+```bash
 git log --oneline
 ```
 
 ## Idea importante: las tres zonas de Git
-Para empezar, alcanza con esta imagen mental:
+Cuando trabajamos con Git, los cambios pasan por tres zonas:
 
-- **Working directory**: los archivos que estás editando
-- **Staging area**: lo que marcaste para guardar
-- **Repository**: el historial ya guardado con commits
+![Áreas de trabajo de Git](../img/git_3.png)
+
+- **Área de trabajo**: la carpeta del proyecto, donde editás los archivos.
+- **Área de preparación**: los cambios que elegiste para el próximo commit.
+- **Repositorio local**: el historial guardado dentro de la carpeta oculta `.git`.
 
 En forma simple:
 
 > escribo, selecciono, guardo versión.
 
+![Idea de commit en Git](../img/git_4.png)
+
+Un **commit** es una versión guardada del proyecto. Funciona como una foto del estado de los archivos en un momento determinado.
+
 ## Actividad 4: modificar el proyecto
 
 Agregar una segunda línea al `README.md`.
 
-Podés hacerlo desde VS Code o con este comando:
+Podés hacerlo desde VS Code o desde **Git Bash** con este comando:
 
-```powershell
-Add-Content README.md "Este repositorio se creó para practicar Git local."
+```bash
+echo "Este repositorio se creó para practicar Git local." >> README.md
 ```
 
 Ahora, ejecutar:
 
-```powershell
+```bash
 git status
 git add README.md
 git commit -m "Actualizo el README con una descripción"
@@ -186,23 +181,46 @@ git log --oneline
 
 ## Actividad 5: crear un archivo de código
 
-Crear un archivo `saludo.py` con este contenido:
+Crear una carpeta nueva llamada `scripts`.
+
+Dentro de esa carpeta, crear un archivo `saludo.py` con este contenido:
 
 ```python
 print("Hola, Git")
 ```
 
-Si querés crearlo desde terminal:
+Si querés crear la carpeta y el archivo desde terminal:
 
-```powershell
-echo 'print("Hola, Git")' > saludo.py
+```bash
+mkdir scripts
+echo 'print("Hola, Git")' > scripts/saludo.py
 ```
 
-Luego, ejecutar:
+Luego, mirar el estado:
 
-```powershell
+```bash
 git status
+```
+
+Para agregar cambios al área de preparación hay dos formas comunes:
+
+```bash
 git add .
+```
+
+`git add .` agrega todos los cambios nuevos o modificados que estén dentro de la carpeta actual del repositorio.
+
+También se puede agregar un archivo específico:
+
+```bash
+git add scripts/saludo.py
+```
+
+`git add scripts/saludo.py` agrega solo ese archivo. Es útil cuando modificaste varias cosas, pero querés guardar en el próximo commit solamente una parte.
+
+Después de elegir una de las dos formas, hacer el commit:
+
+```bash
 git commit -m "Agrego script saludo.py"
 git log --oneline
 ```
@@ -219,9 +237,9 @@ Responder con tus palabras:
 ## Mini ejercicio guiado
 Repetí esta secuencia:
 
-```powershell
+```bash
 git status
-Add-Content README.md "Nueva línea de prueba"
+echo "Nueva línea de prueba" >> README.md
 git status
 git add README.md
 git status
@@ -236,7 +254,7 @@ La idea es mirar cómo cambia el estado en cada paso.
 ### Git no reconoce tu identidad
 Si aparece un mensaje pidiendo nombre o correo, configurá:
 
-```powershell
+```bash
 git config --global user.name "Tu Nombre"
 git config --global user.email "tunombre@ejemplo.com"
 ```

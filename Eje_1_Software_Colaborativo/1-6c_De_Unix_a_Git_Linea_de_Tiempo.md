@@ -150,15 +150,15 @@ Mientras cada grupo expone, el resto completa una línea de tiempo general.
 
 | Año | Hito | Problema que resolvía | Conexión con Git |
 |---|---|---|---|
-| 1969 | Unix | | |
-| 1983 | GNU | | |
-| 1985 | FSF | | |
-| 1987 | Minix | | |
-| 1991 | Linux | | |
-| 1991 | GPL v2 | | |
-| 1998 | Open Source | | |
-| 2002 | BitKeeper | | |
-| 2005 | Git | | |
+| 1969 | Unix | Crear un sistema operativo portable, simple y pensado para programadores. | Aportó ideas de diseño y cultura técnica que luego influyeron en Linux y Git. |
+| 1983 | GNU | Construir un sistema operativo libre compatible con Unix. | Defendió la colaboración y las herramientas libres que forman parte del ecosistema de Git. |
+| 1985 | FSF | Organizar la defensa legal y política del software libre. | Instaló la idea de compartir código y proteger libertades de uso, estudio y modificación. |
+| 1987 | Minix | Enseñar cómo funcionaba un sistema operativo tipo Unix. | Fue una referencia educativa para Linus Torvalds antes de crear Linux. |
+| 1991 | Linux | Crear un kernel libre tipo Unix para computadoras personales. | Git nació años después para coordinar el desarrollo masivo del kernel Linux. |
+| 1991 | GPL v2 | Evitar que el software libre fuera cerrado por terceros. | Linux adoptó esta licencia, fortaleciendo una comunidad de desarrollo abierta. |
+| 1998 | Open Source | Presentar el software libre con un enfoque más práctico y empresarial. | Ayudó a expandir la colaboración abierta en proyectos de software. |
+| 2002 | BitKeeper | Ordenar los cambios del kernel Linux con control de versiones distribuido. | Mostró la necesidad de una herramienta distribuida, pero su licencia generó conflicto. |
+| 2005 | Git | Reemplazar a BitKeeper con una herramienta libre, rápida y distribuida. | Es la herramienta creada para gestionar Linux y luego usada en millones de proyectos. |
 
 ## Cierre: la película completa
 
