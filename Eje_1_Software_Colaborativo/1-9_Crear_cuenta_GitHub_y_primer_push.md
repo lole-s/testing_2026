@@ -1,41 +1,56 @@
-# 1-9 Crear cuenta de GitHub y contribuir al repositorio clonado
+# 1-9 Crear cuenta de GitHub y primer cambio desde el navegador
 
-## Clase: primer push a un repositorio compartido
+## Clase: primer contacto con GitHub
 
 ## Objetivo
-Crear una cuenta de **GitHub** usando la cuenta institucional de la escuela y contribuir al repositorio clonado en la actividad anterior.
+Crear una cuenta de **GitHub**, informar el usuario al docente, aceptar una invitacion y hacer un primer cambio desde el navegador.
 
-Esta actividad continua lo trabajado en:
+En esta clase no vamos a clonar repositorios ni usar la terminal.
 
-- [1-7 Git local](1-7_Git_Local.md)
-- [1-7b Git local: practica complementaria](1-7b_Git_practica_complementaria.md)
-- [1-8 Git desde Visual Studio Code](1-8_Git_desde_VSCode.md)
+La clase siguiente retoma esto desde VS Code:
 
-En la clase anterior clonamos este repositorio:
+- [1-10 Repositorio colaborativo desde Visual Studio Code](1-10_Repositorio_colaborativo_desde_VSCode.md)
+
+---
+
+## Video previo
+
+Mirar el inicio del siguiente video para reconocer que son Git y GitHub:
 
 ```text
-https://github.com/lole-s/game-hub.git
+Curso de GIT y GITHUB desde CERO para PRINCIPIANTES
+https://www.youtube.com/watch?v=3GymExBkKjE
 ```
 
-Ahora vamos a usar una cuenta de GitHub para poder subir una contribucion sencilla al mismo repositorio.
+Responder:
 
 ```text
-clonar -> modificar nombres.md -> commit -> push
+¿Para que sirve GitHub?
+¿Que diferencia hay entre Git y GitHub?
+¿Por que puede servirnos un repositorio compartido?
 ```
 
 ---
 
 ## ¿Que es GitHub?
 
-**GitHub** es una plataforma online para guardar, compartir y revisar proyectos de software.
+GitHub es una plataforma online para guardar, compartir y revisar proyectos.
 
-GitHub usa **Git**, el sistema de control de versiones que ya venimos practicando. Git guarda el historial del proyecto; GitHub permite alojar ese historial en internet para compartirlo y trabajar con otras personas.
+Git guarda el historial del proyecto. GitHub permite alojar ese historial en internet para trabajar con otras personas.
+
+En esta clase vamos a usar GitHub para:
+
+- crear cuenta
+- aceptar una invitacion
+- editar archivos desde el navegador
+- hacer commits online
+- abrir el editor `github.dev`
 
 ---
 
-## Parte 1: crear la cuenta de GitHub
+## Parte 1: crear la cuenta
 
-Usar la cuenta de correo de la escuela indicada por la docente.
+Usar la cuenta institucional indicada por el docente.
 
 1. Entrar a:
 
@@ -44,238 +59,214 @@ https://github.com
 ```
 
 2. Hacer clic en **Sign up**.
-3. Completar los datos:
+3. Completar:
 
 | Dato | Indicacion |
 |---|---|
-| Email | Usar la cuenta institucional de la escuela |
-| Password | Crear una contraseña segura |
-| Username | Elegir un nombre de usuario identificable y prolijo |
+| Email | Correo institucional |
+| Password | Contraseña segura |
+| Username | Usuario identificable |
 
-4. Verificar la cuenta desde el correo institucional.
+4. Verificar la cuenta desde el correo.
 5. Elegir el plan gratuito si GitHub lo solicita.
 
-Responder:
+Usuario recomendado:
 
 ```text
-¿Pudiste verificar la cuenta desde el correo de la escuela?
-¿Cual es tu nombre de usuario de GitHub?
+nombre-apellido-proa
+apellido-nombre-proa
+```
+
+Evitar:
+
+```text
+apodos dificiles de identificar
+datos privados como DNI o telefono
+```
+
+Entregar al docente:
+
+```text
+Nombre y apellido:
+Usuario de GitHub:
 ```
 
 Importante:
 
 ```text
-No escribir contraseñas en la carpeta del proyecto, en README.md ni en capturas.
+No entregar contraseñas.
+No compartir codigos de verificacion.
 ```
 
 ---
 
-## Parte 2: recibir acceso al repositorio
+## Parte 2: aceptar la invitacion
 
-Para poder hacer `push` al repositorio de la docente, cada estudiante necesita tener permiso de escritura o ser agregado/a como colaborador/a.
-
-Repositorio de trabajo:
+Repositorio de practica sugerido:
 
 ```text
-https://github.com/lole-s/game-hub
+primer-github-proa
 ```
 
-La docente puede pedir el nombre de usuario de GitHub de cada estudiante y habilitar el acceso.
+Archivos esperados:
+
+```text
+README.md
+presentaciones.md
+dudas.md
+```
+
+Despues de recibir la invitacion, aceptarla desde GitHub o desde el correo institucional.
 
 Responder:
 
 ```text
 ¿Cual es tu usuario de GitHub?
-¿La docente ya confirmo que tenes acceso al repositorio?
+¿Aceptaste la invitacion?
+¿Podes entrar al repositorio?
 ```
 
 ---
 
-## Parte 3: abrir el repositorio clonado en la clase anterior
+## Parte 3: recorrer el repositorio
 
-Abrir en VS Code la carpeta clonada en la actividad `1-8`.
+Entrar al repositorio indicado por el docente.
 
-Desde terminal:
+Observar:
 
-```bash
-cd /c/temp2026/Testing2026_APELLIDO/Eje_1_Software_Colaborativo/game-hub
-code .
-```
-
-Verificar que el remoto sea el repositorio correcto:
-
-```bash
-git remote -v
-```
-
-Deberia aparecer una URL parecida a:
-
-```text
-https://github.com/lole-s/game-hub.git
-```
-
----
-
-## Parte 4: actualizar antes de modificar
-
-Antes de escribir en `nombres.md`, traer los cambios que ya hayan subido otras personas.
-
-```bash
-git pull
-```
-
-Si Git responde:
-
-```text
-Already up to date.
-```
-
-significa que la copia local ya estaba actualizada.
-
----
-
-## Parte 5: modificar `nombres.md`
-
-Abrir el archivo:
-
-```text
-nombres.md
-```
-
-Agregar el nombre y apellido en una linea nueva.
-
-Ejemplo:
-
-```text
-Nombre Apellido
-```
-
-Guardar el archivo.
-
-Verificar el cambio:
-
-```bash
-git status
-```
-
----
-
-## Parte 6: hacer el commit
-
-Desde VS Code:
-
-1. Abrir el panel de **Control de codigo fuente**.
-2. Revisar que el archivo modificado sea `nombres.md`.
-3. Preparar el cambio con `+`.
-4. Escribir este mensaje de commit:
-
-```text
-Agrego mi nombre en nombres.md
-```
-
-5. Hacer commit.
-
-Desde terminal seria:
-
-```bash
-git add nombres.md
-git commit -m "Agrego mi nombre en nombres.md"
-```
-
-Verificar:
-
-```bash
-git log --oneline
-```
-
----
-
-## Parte 7: subir la contribucion con push
-
-Subir el commit al repositorio remoto:
-
-```bash
-git push
-```
-
-Desde VS Code tambien se puede usar:
-
-```text
-Push
-```
-
-Si GitHub pide iniciar sesion, seguir la ventana de autenticacion de VS Code o del navegador.
-
-En computadoras compartidas, cerrar sesion al terminar la clase si la docente lo indica.
-
----
-
-## Parte 8: verificar en GitHub
-
-Entrar al repositorio:
-
-```text
-https://github.com/lole-s/game-hub
-```
-
-Revisar:
-
-- que `nombres.md` tenga el nombre agregado
-- que aparezca el commit con el mensaje indicado
-- que el autor del commit corresponda a la cuenta de GitHub o a la configuracion local de Git
+- nombre del repositorio
+- lista de archivos
+- contenido del `README.md`
+- historial de commits
+- boton para editar archivos
 
 Responder:
 
 ```text
-¿Tu nombre aparece en nombres.md en GitHub?
-¿Que mensaje de commit aparece?
-¿Pudiste hacer push desde VS Code o desde terminal?
+¿Como se llama el repositorio?
+¿Que archivos tiene?
+¿Para que sirve README.md?
 ```
 
 ---
 
-## Si el push falla
+## Parte 4: editar `presentaciones.md`
 
-### No tengo permisos
-
-Si aparece un error de permisos, revisar con la docente si la cuenta de GitHub fue agregada como colaboradora del repositorio.
-
-### Hay cambios nuevos en GitHub
-
-Si otra persona subio cambios antes, Git puede rechazar el `push`.
-
-Primero traer los cambios:
-
-```bash
-git pull
-```
-
-Si no hay conflicto, volver a intentar:
-
-```bash
-git push
-```
-
-### Aparece un conflicto en `nombres.md`
-
-Un conflicto puede aparecer si varias personas modificaron la misma parte del archivo.
-
-En ese caso:
-
-1. Abrir `nombres.md`.
-2. Buscar las marcas:
+Abrir:
 
 ```text
-<<<<<<<
-=======
->>>>>>>
+presentaciones.md
 ```
 
-3. Dejar todos los nombres que correspondan.
-4. Borrar las marcas del conflicto.
-5. Guardar.
-6. Hacer commit de la resolucion.
-7. Volver a hacer `push`.
+Agregar una linea con nombre, apellido y una frase breve.
+
+Ejemplo:
+
+```text
+- Ana Perez: me interesa aprender GitHub para trabajar mejor en equipo.
+```
+
+Mensaje de commit:
+
+```text
+Agrego mi presentacion
+```
+
+Responder:
+
+```text
+¿Tu presentacion aparece en el archivo?
+¿Que mensaje de commit usaste?
+¿Quedo registrado tu usuario?
+```
+
+---
+
+## Parte 5: editar `dudas.md`
+
+Abrir:
+
+```text
+dudas.md
+```
+
+Agregar una pregunta sobre GitHub, Git o trabajo colaborativo.
+
+Ejemplos:
+
+```text
+- ¿Que diferencia hay entre guardar y hacer commit?
+- ¿Que pasa si dos personas editan el mismo archivo?
+- ¿Para que sirve clonar un repositorio?
+```
+
+Mensaje de commit:
+
+```text
+Agrego una duda sobre GitHub
+```
+
+---
+
+## Parte 6: abrir github.dev
+
+GitHub tiene un editor online parecido a VS Code llamado:
+
+```text
+github.dev
+```
+
+Para abrirlo:
+
+1. Entrar al repositorio.
+2. Presionar la tecla:
+
+```text
+.
+```
+
+Tambien se puede cambiar la URL:
+
+```text
+github.com
+```
+
+por:
+
+```text
+github.dev
+```
+
+Actividad breve:
+
+1. Abrir `dudas.md`.
+2. Mejorar o corregir la pregunta propia.
+3. Hacer commit con el mensaje:
+
+```text
+Mejoro mi pregunta sobre GitHub
+```
+
+Responder:
+
+```text
+¿Pudiste abrir github.dev?
+¿Que se parece a VS Code?
+¿Que diferencias encontraste?
+```
+
+---
+
+## Si no aparece el acceso
+
+Revisar:
+
+```text
+¿Informaste tu usuario de GitHub?
+¿La invitacion fue enviada al usuario correcto?
+¿Aceptaste la invitacion?
+¿Estas logueado/a con la cuenta correcta?
+```
 
 ---
 
@@ -283,25 +274,23 @@ En ese caso:
 
 Cada estudiante entrega:
 
-- captura de `nombres.md` en GitHub con su nombre visible
-- captura o texto de `git log --oneline`
+- usuario de GitHub
+- captura de `presentaciones.md` con su linea visible
+- captura de `dudas.md` con su pregunta visible
+- captura del historial con al menos un commit propio
 - respuesta breve:
 
 ```text
-¿Que diferencia hay entre commit y push?
-¿Por que hicimos pull antes de modificar nombres.md?
-¿Que permiso necesita una cuenta para poder hacer push a un repositorio?
+¿Que diferencia hay entre Git y GitHub?
+¿Que es un commit?
+¿Que diferencia notaste entre GitHub y github.dev?
 ```
 
 ---
 
-## Cierre conceptual
-
-En esta actividad no creamos un repositorio nuevo.
-
-Usamos un repositorio existente, hicimos una modificacion chica, guardamos el cambio con `commit` y lo compartimos con `push`.
+## Resumen
 
 ```text
-Git guarda el cambio local.
-GitHub recibe el cambio compartido.
+Hoy: GitHub desde el navegador.
+Proxima clase: Git + GitHub + VS Code en trabajo colaborativo.
 ```
