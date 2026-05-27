@@ -82,3 +82,10 @@ Preguntas de cierre:
 ## Próxima clase
 
 Recuperar la rama de trabajo desde otra computadora y sincronizar cambios con GitHub.
+
+Como continuidad, el repositorio `simon-proa-2026` incluye una segunda actividad para modificar una parte pequeña del juego y observar el resultado publicado en Vercel:
+
+```text
+simon-proa-2026/doc/actividad-2-modificar-juego.md
+https://simon-proa-2026.vercel.app/
+```
