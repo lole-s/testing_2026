@@ -12,7 +12,7 @@ En esta clase los grupos van a:
 - abrir y probar la app Simon
 - organizarse en roles de 3 integrantes
 - crear una rama de trabajo
-- hacer una modificacion pequena
+- hacer una modificación pequeña
 - subir la rama a GitHub
 - crear un Pull Request
 
@@ -22,7 +22,7 @@ Flujo de trabajo:
 clonar -> explorar -> probar -> crear rama -> modificar -> commit -> push -> Pull Request
 ```
 
-La recuperacion de la rama desde otra computadora queda para la clase siguiente.
+La recuperación de la rama desde otra computadora queda para la clase siguiente.
 
 ---
 
@@ -34,9 +34,9 @@ Repositorio:
 https://github.com/lole-s/simon-proa-2026
 ```
 
-El proyecto es una version del juego Simon hecha con HTML, CSS y JavaScript.
+El proyecto es una versión del juego Simon hecha con HTML, CSS y JavaScript.
 
-El paso a paso para estudiantes esta en:
+El paso a paso para estudiantes está en:
 
 ```text
 simon-proa-2026/doc/instructivo.md
@@ -66,19 +66,19 @@ Cada grupo entrega:
 - nombre de la rama
 - integrantes y roles
 - respuestas de la actividad breve
-- descripcion del cambio realizado
+- descripción del cambio realizado
 
 Preguntas de cierre:
 
 ```text
-¿Que es una rama?
-¿Que es un Pull Request?
-¿Por que el cambio no va directo a main?
-¿Que diferencia hay entre guardar, commit y push?
+¿Qué es una rama?
+¿Qué es un Pull Request?
+¿Por qué el cambio no va directo a main?
+¿Qué diferencia hay entre guardar, commit y push?
 ```
 
 ---
 
-## Proxima clase
+## Próxima clase
 
 Recuperar la rama de trabajo desde otra computadora y sincronizar cambios con GitHub.
