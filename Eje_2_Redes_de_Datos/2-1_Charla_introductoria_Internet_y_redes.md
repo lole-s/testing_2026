@@ -31,7 +31,6 @@ Cada grupo tendrá **15 minutos** para presentar su trabajo. No importa si exist
 
 ["El Mapa Digital - Un millón de kilómetros de cable para conectar al mundo".](https://www.youtube.com/watch?v=cQVuJte-1dQ)
 
-<!--
 
 ## Objetivos de la clase
 
@@ -50,6 +49,7 @@ Cuando enviamos un mensaje o abrimos una página, la información no viaja como 
 
 Esas reglas se llaman **protocolos**. En Internet, la familia de protocolos más importante es **TCP/IP**.
 
+<!--
 ## Puesta en común
 
 Cada grupo comparte su dibujo en 2 minutos.
@@ -74,8 +74,8 @@ Tres ideas para llevarse de esta clase:
 2. La información viaja dividida en paquetes.
 3. Para que los paquetes lleguen hacen falta direcciones y protocolos.
 
-## Recurso adicional
+-->
 
+## Recurso adicional
 - Mapa de cables submarinos: <https://www.submarinecablemap.com/>
 
--->
