@@ -356,4 +356,3 @@ Luego responder:
 5. Cuando el cliente abrio Simon Proa, que archivos tuvo que entregar el servidor ademas de `index.html`?
 6. Que tienen en comun Live Server, Apache e IIS?
 7. Por que en esta practica usamos `http://` y no `https://`?
-8. Donde aparece esta practica en el mapa final del recorrido de la informacion?

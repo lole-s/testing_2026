@@ -26,31 +26,34 @@ Al finalizar el eje, se espera que cada estudiante pueda:
 | 3 | Conectividad: `ipconfig`, `ping`, IP y dominios | [2-3_Practica_conectividad_IP_DNS_Ping.md](./2-3_Practica_conectividad_IP_DNS_Ping.md) |
 | 4 | IP, MAC, ARP y red local | [2-4_Practica_MAC_IP_ARP_LAN.md](./2-4_Practica_MAC_IP_ARP_LAN.md) |
 | 5 | Cliente-servidor y HTTP en la red local | [2-5_Practica_cliente_servidor_HTTP.md](./2-5_Practica_cliente_servidor_HTTP.md) |
-| 6 y 7 | Proyecto grupal: mapa del recorrido de la información y exposición | [2-6_Proyecto_grupal_Como_viaja_la_informacion.md](./2-6_Proyecto_grupal_Como_viaja_la_informacion.md) |
-| 8 opcional | Wireshark o situaciones problema de integración | [2-7_Integracion_Wireshark_y_situaciones_problema.md](./2-7_Integracion_Wireshark_y_situaciones_problema.md) |
+| 6 | Instalación y uso inicial de Wireshark: ARP, ICMP, DNS y HTTP | [2-6_Instalacion_y_uso_inicial_Wireshark.md](./2-6_Instalacion_y_uso_inicial_Wireshark.md) |
+| 7 | Cierre práctico: construcción y diagnóstico de dos mini-LAN | [2-7_Construccion_y_diagnostico_mini_LAN.md](./2-7_Construccion_y_diagnostico_mini_LAN.md) |
 
 Material de cierre:
 
 - [Evaluación breve del eje](./2-z_Evaluacion_breve_Eje_2_Redes_de_Datos.md)
 
-## Actividad central teórico-práctica
+## Actividad integradora de cierre
 
-El eje se organiza alrededor de una actividad grupal para **6 grupos de 4 estudiantes**:
+El eje finaliza con una experiencia práctica para **6 grupos de 4 estudiantes**, organizados alrededor de dos routers domiciliarios:
 
-> Construir y explicar un mapa del recorrido de la información en una red TCP/IP.
+> Construir dos redes locales aisladas, conectar notebooks, ofrecer Simon Proa como servicio web y diagnosticar fallas reales.
 
-La actividad combina dos momentos:
+La integración se desarrolla en dos momentos:
 
-- **Momento teórico:** formular una hipótesis, construir el mapa del recorrido y explicar los conceptos principales con palabras propias.
-- **Momento práctico:** relevar datos reales de red, probar conectividad y acceder a un servidor local desde otra computadora.
+- **Observación:** instalar Wireshark y reconocer tráfico ARP, ICMP, DNS y HTTP generado por acciones conocidas.
+- **Construcción y diagnóstico:** configurar dos mini-LAN, observar DHCP, comprobar conectividad, acceder a un servidor local e introducir fallas controladas.
 
-Cada grupo deberá:
+Los grupos deberán poder:
 
-- Dibujar el recorrido de un mensaje desde una computadora cliente hasta un servidor.
-- Relevar IP, MAC, puerta de enlace y DNS de una PC.
-- Probar conectividad usando `ping`.
-- Acceder a un servidor local simple desde otra computadora.
-- Entregar evidencias y una explicación corta con palabras propias.
+- diferenciar los puertos LAN y WAN de un router;
+- reconocer qué dispositivo asigna las direcciones IP;
+- relevar IP, MAC, puerta de enlace y DHCP;
+- probar conectividad con `ping` y observar `arp -a`;
+- acceder a Simon Proa desde clientes de la misma LAN;
+- utilizar Wireshark para relacionar acciones con paquetes;
+- diagnosticar y corregir una falla sencilla;
+- explicar el recorrido con los equipos reales de la práctica.
 
 ## Vocabulario mínimo
 
