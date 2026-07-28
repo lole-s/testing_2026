@@ -29,6 +29,9 @@ Cada grupo tendrá **15 minutos** para presentar su trabajo. No importa si exist
 
 ## Video
 
+https://repositorio.curriculum.program.ar/repositorio-diseno-curricular/como-viaja-un-mensaje/
+
+
 ["El Mapa Digital - Un millón de kilómetros de cable para conectar al mundo".](https://www.youtube.com/watch?v=cQVuJte-1dQ)
 
 
