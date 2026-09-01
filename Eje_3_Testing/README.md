@@ -5,14 +5,12 @@ En este eje aprenderemos a comprobar el comportamiento de un producto, diseñar 
 ## Clases
 
 1. [Introducción al testing - Cacería de bugs](3-1_Introduccion_al_testing.md)
-2. [Requisitos y casos de prueba](3_02_Requisitos_y_Casos_de_Prueba.md)
+2. [Requisitos y casos de prueba - La boletería bajo prueba](3-2_Requisitos_y_Casos_de_Prueba.md)
 
 ## Recursos de las clases
 
 - [Plantilla de entrega de la clase 3-1](recursos/3-1_Plantilla_entrega.md)
-- [Aplicación de inscripción con defectos intencionales](practicas/3-1_inscripcion_con_bugs.html)
-- [Actividad 3-1 sin Internet](recursos/3-1_Actividad_sin_internet.md)
-- [Programa de práctica de la clase 2](practicas/clase_02_detectando_bugs.py)
+- [Boletería con defectos intencionales](practicas/3-2_boleteria_con_bugs.py)
 
 ## Evidencias de trabajo
 
