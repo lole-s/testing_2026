@@ -27,10 +27,12 @@ Al finalizar el eje, se espera que cada estudiante pueda:
 | 4 | IP, MAC, ARP y red local | [2-4_Practica_MAC_IP_ARP_LAN.md](./2-4_Practica_MAC_IP_ARP_LAN.md) |
 | 5 | Cliente-servidor y HTTP en la red local | [2-5_Practica_cliente_servidor_HTTP.md](./2-5_Practica_cliente_servidor_HTTP.md) |
 | 6 | Instalación y uso inicial de Wireshark: ARP, ICMP, DNS y HTTP | [2-6_Instalacion_y_uso_inicial_Wireshark.md](./2-6_Instalacion_y_uso_inicial_Wireshark.md) |
-| 7 | Cierre práctico: construcción y diagnóstico de dos mini-LAN | [2-7_Construccion_y_diagnostico_mini_LAN.md](./2-7_Construccion_y_diagnostico_mini_LAN.md) |
+| 7 | Observar con Wireshark el tráfico entre cliente y servidor | [2-7_Observar_trafico_cliente_servidor_con_Wireshark.md](./2-7_Observar_trafico_cliente_servidor_con_Wireshark.md) |
+| 8 | Cierre práctico: construcción y diagnóstico de dos mini-LAN | [2-8_Construccion_y_diagnostico_mini_LAN.md](./2-8_Construccion_y_diagnostico_mini_LAN.md) |
 
 Material de cierre:
 
+- [Actividad integradora domiciliaria](./2-y_Actividad_integradora_domiciliaria_Eje_2.md)
 - [Evaluación breve del eje](./2-z_Evaluacion_breve_Eje_2_Redes_de_Datos.md)
 
 ## Actividad integradora de cierre

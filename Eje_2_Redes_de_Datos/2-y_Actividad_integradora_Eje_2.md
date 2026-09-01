@@ -1,4 +1,4 @@
-# Actividad integradora domiciliaria — Eje 2: Redes de datos
+# Actividad integradora - para período de pasantías — Eje 2: Redes de datos
 
 **Nombre y apellido:**  
 **Curso:**  
