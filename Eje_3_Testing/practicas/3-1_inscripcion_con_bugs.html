@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inscripción a talleres</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #eef2ff;
+      color: #172033;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      padding: 32px 16px;
+    }
+
+    main {
+      width: min(920px, 100%);
+      margin: 0 auto;
+    }
+
+    h1 { margin-bottom: 8px; }
+    h2 { margin-top: 0; font-size: 1.2rem; }
+    p { line-height: 1.5; }
+
+    .intro { margin-top: 0; color: #48536a; }
+
+    .layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(260px, .8fr);
+      gap: 20px;
+      align-items: start;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid #d9def0;
+      border-radius: 14px;
+      padding: 22px;
+      box-shadow: 0 8px 24px rgb(38 48 83 / 8%);
+    }
+
+    label, legend {
+      display: block;
+      margin-bottom: 7px;
+      font-weight: 650;
+    }
+
+    input[type="text"], input[type="number"], select {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid #aeb7cf;
+      border-radius: 8px;
+      font: inherit;
+    }
+
+    .field { margin-bottom: 18px; }
+
+    fieldset {
+      margin: 0 0 18px;
+      padding: 0;
+      border: 0;
+    }
+
+    .option {
+      display: inline-flex;
+      gap: 7px;
+      align-items: center;
+      margin: 3px 18px 3px 0;
+      font-weight: 400;
+    }
+
+    .actions { display: flex; gap: 10px; flex-wrap: wrap; }
+
+    button {
+      padding: 10px 16px;
+      border: 0;
+      border-radius: 8px;
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    button[type="submit"] { background: #3157d5; color: white; }
+    button[type="button"] { background: #e5e9f5; color: #27334c; }
+
+    .rules ol { padding-left: 22px; line-height: 1.55; }
+
+    #resultado {
+      min-height: 48px;
+      margin-top: 18px;
+      padding: 12px;
+      border-radius: 8px;
+      background: #f3f5fa;
+    }
+
+    #resultado:empty { display: none; }
+    .error { color: #a51c30; border: 1px solid #efb2bb; background: #fff1f3 !important; }
+    .ok { color: #145c37; border: 1px solid #9dd5b6; background: #edfff4 !important; }
+
+    @media (max-width: 700px) {
+      .layout { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Inscripción a talleres</h1>
+    <p class="intro">Completá el formulario para reservar un lugar.</p>
+
+    <div class="layout">
+      <form id="inscripcion" class="card" novalidate>
+        <div class="field">
+          <label for="nombre">Nombre y apellido</label>
+          <input id="nombre" name="nombre" type="text">
+        </div>
+
+        <div class="field">
+          <label for="edad">Edad</label>
+          <input id="edad" name="edad" type="number">
+        </div>
+
+        <div class="field">
+          <label for="taller">Taller</label>
+          <select id="taller" name="taller">
+            <option value="">Seleccionar...</option>
+            <option value="Robótica">Robótica</option>
+            <option value="Videojuegos">Videojuegos</option>
+            <option value="Radio escolar">Radio escolar</option>
+          </select>
+        </div>
+
+        <fieldset>
+          <legend>Turno</legend>
+          <label class="option"><input type="radio" name="turno" value="mañana"> Mañana</label>
+          <label class="option"><input type="radio" name="turno" value="tarde"> Tarde</label>
+        </fieldset>
+
+        <div class="field">
+          <label class="option">
+            <input id="acuerdo" name="acuerdo" type="checkbox">
+            Acepto las normas de convivencia
+          </label>
+        </div>
+
+        <div class="actions">
+          <button type="submit">Confirmar inscripción</button>
+          <button id="limpiar" type="button">Limpiar</button>
+        </div>
+
+        <div id="resultado" role="status" aria-live="polite"></div>
+      </form>
+
+      <section class="card rules" aria-labelledby="reglas-titulo">
+        <h2 id="reglas-titulo">Reglas del sistema</h2>
+        <ol>
+          <li>El nombre y apellido es obligatorio.</li>
+          <li>La edad permitida es de 12 a 18 años, inclusive.</li>
+          <li>Se debe elegir un taller y un turno.</li>
+          <li>Es obligatorio aceptar las normas.</li>
+          <li>La confirmación debe mostrar los mismos datos seleccionados.</li>
+          <li><strong>Limpiar</strong> debe dejar el formulario y los mensajes vacíos.</li>
+        </ol>
+      </section>
+    </div>
+  </main>
+
+  <script>
+    const formulario = document.querySelector("#inscripcion");
+    const resultado = document.querySelector("#resultado");
+    const botonLimpiar = document.querySelector("#limpiar");
+
+    function mostrarError(mensaje) {
+      resultado.className = "error";
+      resultado.textContent = mensaje;
+    }
+
+    formulario.addEventListener("submit", (evento) => {
+      evento.preventDefault();
+
+      const datos = new FormData(formulario);
+      const nombre = datos.get("nombre").trim();
+      const edad = Number(datos.get("edad"));
+      const taller = datos.get("taller");
+      const turno = datos.get("turno");
+
+      if (!nombre && nombre.length < 0) {
+        mostrarError("Ingresá tu nombre y apellido.");
+        return;
+      }
+
+      if (edad <= 12 || edad > 18) {
+        mostrarError("La edad debe estar entre 12 y 18 años.");
+        return;
+      }
+
+      if (!taller) {
+        mostrarError("Elegí un taller.");
+        return;
+      }
+
+      if (!turno) {
+        mostrarError("Elegí un turno.");
+        return;
+      }
+
+      if (!formulario.acuerdo.checked) {
+        mostrarError("Debés aceptar las normas de convivencia.");
+        return;
+      }
+
+      const turnoConfirmado = turno === "tarde" ? "mañana" : turno;
+      resultado.className = "ok";
+      resultado.textContent = `Inscripción confirmada para ${nombre}: ${taller}, turno ${turnoConfirmado}.`;
+    });
+
+    botonLimpiar.addEventListener("click", () => {
+      formulario.reset();
+    });
+  </script>
+</body>
+</html>

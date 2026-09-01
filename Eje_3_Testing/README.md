@@ -1,39 +1,21 @@
-# Eje 3: Testing y calidad de software
+# Eje 3: Testing
 
-En este eje aprenderemos a probar software, documentar fallas, diseñar casos de prueba, depurar programas y crear pruebas automatizadas.
+En este eje aprenderemos a comprobar el comportamiento de un producto, diseñar casos de prueba, comunicar defectos, depurar código y automatizar pruebas.
 
-## Primeras clases
+## Clases
 
-1. **[Clase 1 — ¿Qué es el testing de software?](3_01_Que_es_el_Testing.md)**
-   - Testing exploratorio.
-   - Cacería de bugs en una aplicación web.
-   - Resultado esperado y resultado obtenido.
-   - Reporte y reproducción de errores.
+1. [Introducción al testing - Cacería de bugs](3-1_Introduccion_al_testing.md)
+2. [Requisitos y casos de prueba](3_02_Requisitos_y_Casos_de_Prueba.md)
 
-2. **[Clase 2 — Requisitos y casos de prueba](3_02_Requisitos_y_Casos_de_Prueba.md)**
-   - Requisitos sencillos.
-   - Diseño y ejecución de casos de prueba.
-   - Práctica con un programa Python.
-   - Diferencia entre testing y depuración.
+## Recursos de las clases
 
-## Recursos
+- [Plantilla de entrega de la clase 3-1](recursos/3-1_Plantilla_entrega.md)
+- [Aplicación de inscripción con defectos intencionales](practicas/3-1_inscripcion_con_bugs.html)
+- [Actividad 3-1 sin Internet](recursos/3-1_Actividad_sin_internet.md)
+- [Programa de práctica de la clase 2](practicas/clase_02_detectando_bugs.py)
 
-- [Plantilla de reporte de bug](recursos/plantilla_reporte_bug.md)
-- [Programa de práctica con bugs intencionales](practicas/clase_02_detectando_bugs.py)
+## Evidencias de trabajo
 
-## Material docente
+Durante el eje conservaremos requisitos, casos de prueba, resultados, reportes, capturas, hipótesis, correcciones, pruebas automatizadas e historial de cambios.
 
-- [Guía docente — Clases 1 y 2](00_GUIA_DOCENTE_Clases_01_y_02.md)
-
-## Forma de trabajo
-
-Durante el eje conservaremos evidencias de las pruebas realizadas:
-
-- casos de prueba;
-- reportes de bugs;
-- capturas y resultados;
-- hipótesis y correcciones;
-- pruebas automatizadas;
-- historial de cambios en Git y GitHub.
-
-El objetivo no será solamente encontrar errores, sino aprender a comprobar, comunicar y mejorar la calidad de un producto de software.
+La meta no es solamente encontrar errores: es aprender a obtener evidencia, comunicarla y usarla para mejorar un producto.
