@@ -23,7 +23,7 @@ No creen un archivo diferente para cada actividad.
 
 ## Introducción teórica
 
-El profesor proyectará [¿Qué es el testing de software? - OpenWebinars](https://www.youtube.com/watch?v=imu4oIpALy8). El enlace queda disponible para quienes necesiten revisarlo después.
+[¿Qué es el testing de software? - OpenWebinars](https://www.youtube.com/watch?v=imu4oIpALy8). El enlace queda disponible para quienes necesiten revisarlo después.
 
 ### Conceptos mínimos
 
