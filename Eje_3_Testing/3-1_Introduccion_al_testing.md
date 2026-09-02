@@ -21,6 +21,40 @@ Cada pareja realiza **una sola entrega en Google Docs**.
 
 No creen un archivo diferente para cada actividad.
 
+## Introducción teórica
+
+El profesor proyectará [¿Qué es el testing de software? - OpenWebinars](https://www.youtube.com/watch?v=imu4oIpALy8). El enlace queda disponible para quienes necesiten revisarlo después.
+
+### Conceptos mínimos
+
+El **testing de software** es un conjunto de actividades que permite obtener información sobre la calidad de un producto y comprobar si su comportamiento coincide con lo esperado.
+
+Un **bug** o defecto es un problema en el software que puede producir un comportamiento incorrecto. Durante una prueba observamos una **falla** cuando el resultado obtenido no coincide con el esperado.
+
+| Concepto | Pregunta que responde |
+| --- | --- |
+| Acción o entrada | ¿Qué hice o qué dato ingresé? |
+| Resultado esperado | ¿Qué debería haber ocurrido y por qué? |
+| Resultado obtenido | ¿Qué ocurrió realmente? |
+| Evidencia | ¿Qué puedo mostrar para sostenerlo? |
+| Reproducibilidad | ¿Otra persona puede repetirlo con mis pasos? |
+
+> Encontrar un bug por casualidad sirve. Poder explicar qué se hizo y qué ocurrió sirve mucho más.
+
+### Un caso real: Mars Climate Orbiter
+
+[Mars Climate Orbiter: un error de unidades](https://www.youtube.com/watch?v=DrITKbJfnV0)
+
+Después de ver el corto, respondan en el documento:
+
+- ¿Qué dato deberían haber acordado y probado los equipos antes de utilizar el sistema?
+
+### Para ampliar
+
+[¿Necesitás saber programar para ser tester de software? - Testing Para Todos](https://www.youtube.com/watch?v=3ArIV4iLTVU)
+
+Para encontrar y comunicar un comportamiento inesperado no es indispensable conocer el código del programa. Sí es necesario observar, conocer las reglas, comparar resultados y explicar con claridad qué ocurrió. Saber programar puede ayudar a investigar y automatizar pruebas, pero no reemplaza esas habilidades.
+
 ## Desafío inicial: el sistema que viajó en el tiempo
 
 Durante años, una empresa utilizó el mismo sistema para registrar fechas y nunca había detectado problemas. El `31/12/1999` funcionó normalmente. Al día siguiente, una persona ingresó `01/01/2000`, pero el sistema mostró `01/01/1900`.
@@ -68,33 +102,6 @@ Este ejemplo pertenece a otra aplicación ficticia y no al formulario de tallere
 | --- | --- | --- | --- | --- |
 | 1 | Formulario de inscripción. Dejamos `Nombre` vacío, escribimos `6A` en `Curso` y presionamos `Guardar`. | Como el nombre es obligatorio, el sistema debería avisarlo y no guardar la inscripción. | Apareció `Inscripción guardada` y se creó un registro sin nombre. | Sospechoso |
 | 2 | Formulario de inscripción. Escribimos `Ana` en `Nombre`, `6A` en `Curso` y presionamos `Guardar`. | La inscripción debería guardarse y mostrar una confirmación. | Apareció `Inscripción guardada` y los datos se mostraron correctamente. | Funcionó como esperábamos |
-
-## Video: el error que perdió una misión espacial
-
-[Mars Climate Orbiter: un error de unidades](https://www.youtube.com/watch?v=DrITKbJfnV0).
-
-
-### Para ampliar
-
-[¿Necesitás saber programar para ser tester de software? - Testing Para Todos](https://www.youtube.com/watch?v=3ArIV4iLTVU)
-
-Para encontrar y comunicar un comportamiento inesperado no es indispensable conocer el código del programa. Sí es necesario observar, conocer las reglas, comparar resultados y explicar con claridad qué ocurrió. Saber programar puede ayudar a investigar y automatizar pruebas, pero no reemplaza esas habilidades.
-
-## Conceptos mínimos
-
-El **testing de software** es un conjunto de actividades que permite obtener información sobre la calidad de un producto y comprobar si su comportamiento coincide con lo esperado.
-
-Un **bug** o defecto es un problema en el software que puede producir un comportamiento incorrecto. Durante una prueba observamos una **falla** cuando el resultado obtenido no coincide con el esperado.
-
-| Concepto | Pregunta que responde |
-| --- | --- |
-| Acción o entrada | ¿Qué hice o qué dato ingresé? |
-| Resultado esperado | ¿Qué debería haber ocurrido y por qué? |
-| Resultado obtenido | ¿Qué ocurrió realmente? |
-| Evidencia | ¿Qué puedo mostrar para sostenerlo? |
-| Reproducibilidad | ¿Otra persona puede repetirlo con mis pasos? |
-
-> Encontrar un bug por casualidad sirve. Poder explicar qué se hizo y qué ocurrió sirve mucho más.
 
 ## Evidencia de una prueba
 

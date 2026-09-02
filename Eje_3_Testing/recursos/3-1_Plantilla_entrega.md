@@ -4,6 +4,10 @@
 
 **Fecha:**
 
+## Introducción
+
+**Mars Climate Orbiter — ¿Qué dato deberían haber acordado y probado los equipos antes de utilizar el sistema?**
+
 ## 1. El sistema que viajó en el tiempo
 
 1. Para la fecha `01/01/2000`, ¿cuál sería el resultado esperado y cuál podría ser el resultado obtenido?
