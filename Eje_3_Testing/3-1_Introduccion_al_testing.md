@@ -41,13 +41,26 @@ Un **bug** o defecto es un problema en el software que puede producir un comport
 
 > Encontrar un bug por casualidad sirve. Poder explicar qué se hizo y qué ocurrió sirve mucho más.
 
+### ¿Qué clase de testing haremos?
+
+En el laboratorio realizaremos testing:
+
+- **manual**, porque las pruebas las ejecutan ustedes y no un programa automático;
+- **exploratorio guiado**, porque cada pareja recibe las misiones, decide qué acciones probar y aprende sobre la aplicación mientras la usa;
+- **funcional**, porque comprobaremos si el formulario cumple las reglas indicadas;
+- **de caja negra**, porque observaremos entradas y resultados sin mirar primero el código que los produce.
+
+Estas características pueden aparecer juntas: describen distintos aspectos de una misma actividad.
+
+En esta aplicación podemos encontrar fallas de **validación**, de **límites**, de **consistencia de los datos** o de **estado**. También puede haber pruebas que produzcan el resultado correcto. La misión no consiste en adivinar cuántos bugs hay, sino en comparar lo esperado con lo obtenido.
+
 ### Un caso real: Mars Climate Orbiter
 
 [Mars Climate Orbiter: un error de unidades](https://www.youtube.com/watch?v=DrITKbJfnV0)
 
 Después de ver el corto, respondan en el documento:
 
-- ¿Qué dato deberían haber acordado y probado los equipos antes de utilizar el sistema?
+- ¿Qué deberían haber verificado sobre las unidades de medida de los datos intercambiados por ambos sistemas?
 
 ### Para ampliar
 
@@ -56,6 +69,8 @@ Después de ver el corto, respondan en el documento:
 Para encontrar y comunicar un comportamiento inesperado no es indispensable conocer el código del programa. Sí es necesario observar, conocer las reglas, comparar resultados y explicar con claridad qué ocurrió. Saber programar puede ayudar a investigar y automatizar pruebas, pero no reemplaza esas habilidades.
 
 ## Desafío inicial: el sistema que viajó en el tiempo
+
+Antes de comenzar, veremos [Efecto 2000 - Canal UNED](https://canal.uned.es/video/5a6f2639b1111f2d4c8b4760), un informe realizado antes del cambio de siglo.
 
 Durante años, una empresa utilizó el mismo sistema para registrar fechas y nunca había detectado problemas. El `31/12/1999` funcionó normalmente. Al día siguiente, una persona ingresó `01/01/2000`, pero el sistema mostró `01/01/1900`.
 

@@ -6,7 +6,7 @@
 
 ## Introducción
 
-**Mars Climate Orbiter — ¿Qué dato deberían haber acordado y probado los equipos antes de utilizar el sistema?**
+**Mars Climate Orbiter — ¿Qué deberían haber verificado sobre las unidades de medida de los datos intercambiados por ambos sistemas?**
 
 ## 1. El sistema que viajó en el tiempo
 
