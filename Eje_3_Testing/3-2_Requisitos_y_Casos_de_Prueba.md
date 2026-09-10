@@ -5,6 +5,7 @@
 ## Objetivos de la clase
 
 - Interpretar requisitos sencillos.
+- Diferenciar requisitos funcionales y no funcionales.
 - Diseñar casos de prueba antes de ejecutar un programa.
 - Probar valores normales, límites y valores inválidos.
 - Comparar el resultado esperado con el obtenido.
@@ -28,9 +29,26 @@ Una persona escribió este pedido para generar un programa con IA:
 
 El programa abre y parece funcionar. Sin embargo, el pedido no define precios, edades límite, códigos válidos ni reglas de ingreso. Para probarlo necesitamos transformar la idea en comportamientos concretos.
 
+## ¿Qué son los requisitos?
+
+Un **requisito** expresa una necesidad, función o condición que el producto debe cumplir. Nos permite establecer qué esperamos del programa y comprobar si lo cumple.
+
+| Tipo | ¿Qué describe? | Ejemplo en una boletería |
+| --- | --- | --- |
+| **Funcional** | Qué debe hacer el sistema: sus funciones, reglas y respuestas ante determinadas entradas. | Calcular el precio de la entrada según la edad. |
+| **No funcional** | Qué cualidades debe tener el sistema o qué restricciones debe cumplir, como rendimiento, accesibilidad o compatibilidad. | Mostrar el precio en menos de un segundo en las computadoras del aula, con una consulta a la vez. |
+
+Ambos tipos deben poder comprobarse. Por ejemplo, «el programa debe ser rápido» es ambiguo: necesitamos indicar un tiempo máximo y las condiciones en las que se medirá.
+
+### Video de introducción
+
+[Levantamiento de Requerimientos](https://www.youtube.com/watch?v=Lu3zs3HiddA)
+
+Como actividad de conexión entre el video y esta guía, vuelvan al pedido inicial: ¿qué preguntas le harían a quien pidió la boletería antes de programarla? Escriban dos preguntas en el documento de trabajo.
+
 ## Requisitos de la boletería
 
-Un **requisito** expresa una función, condición o comportamiento que el producto debe cumplir.
+En esta práctica comprobaremos los siguientes **requisitos funcionales**. El ejemplo de tiempo de respuesta de la tabla anterior ilustra un requisito no funcional; no forma parte de las pruebas de este laboratorio.
 
 - **R1 - Precio:** de 0 a 11 años inclusive, la entrada cuesta `$3000`; de 12 a 17, `$4500`; desde los 18, `$6000`. Una edad negativa debe ser rechazada.
 - **R2 - Descuento:** el código `PROA10` descuenta el `10 %`. Cualquier otro código, incluido uno vacío, no aplica descuento.
@@ -56,9 +74,13 @@ Las etiquetas describen distintos aspectos de una misma prueba. Más adelante es
 | Regla de negocio | La decisión del programa contradice un requisito. |
 | Cálculo | El valor numérico obtenido no coincide con el esperado. |
 
-## ¿Qué contiene un caso de prueba?
+## ¿Qué es un caso de prueba?
 
-Un **caso de prueba** indica qué requisito se comprueba, qué datos se utilizarán y qué resultado se espera. El resultado esperado debe escribirse **antes** de ejecutar el programa.
+Un **caso de prueba** describe una comprobación concreta: indica qué requisito se comprueba, qué condiciones previas se necesitan, qué pasos se seguirán, qué datos se utilizarán y qué resultado se espera. Sirve para que otra persona pueda repetir la prueba y comparar los resultados.
+
+El **requisito** establece la regla general; el **caso de prueba** elige una situación concreta para comprobarla. Por ejemplo, si el requisito establece el precio para las personas de 12 a 17 años, un caso puede comprobar qué ocurre con una edad de `15`.
+
+En este laboratorio, la condición previa común es tener el programa abierto en su menú. Los pasos son elegir la opción correspondiente al requisito, ingresar los datos indicados y observar la respuesta. Por eso usaremos una tabla simplificada. El resultado esperado se obtiene del requisito y debe escribirse **antes** de ejecutar el programa.
 
 | Caso | Requisito | Entrada completa | Resultado esperado |
 | --- | --- | --- | --- |
@@ -119,7 +141,7 @@ Elijan una prueba que haya fallado. Ahora sí, abran el código y completen:
 
 El **testing** permite detectar y describir una falla. La **depuración** busca su causa en el código y permite corregirla. Después de una corrección es necesario volver a ejecutar las pruebas.
 
-## Video para revisar
+## Video complementario: casos de prueba
 
 [¿Cómo hacer pruebas de software para QA?](https://www.youtube.com/watch?v=2vqqadY6rCA)
 
@@ -130,6 +152,7 @@ El video explica escenarios, casos de prueba e información necesaria para dise�
 En el mismo documento de Google incluyan:
 
 - nombres de los dos integrantes;
+- dos preguntas para aclarar el pedido inicial de la boletería;
 - seis casos diseñados antes de ejecutar;
 - los seis resultados obtenidos;
 - una captura legible de la terminal con una prueba fallida;
