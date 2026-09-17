@@ -40,7 +40,7 @@ A partir de lo que observaron en la película, respondan brevemente:
 ###### Personajes y puestos
 
 | Personaje |
-|---|---|---|---|
+|---|
 | Peter Gibbons |
 | Michael Bolton 
 | Samir Nagheenanajar |
