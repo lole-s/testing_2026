@@ -34,6 +34,24 @@ A partir de lo que observaron en la película, respondan brevemente:
 4. Elijan un problema de organización o comunicación que aparezca. ¿Qué ocurre y a quiénes afecta?
 5. Dibujen un esquema sencillo de cómo creen que está organizada la empresa. No importa que no conozcan los nombres correctos de las áreas: pueden escribir, por ejemplo, `jefes`, `programadores`, `administración`, `consultores`, etc.
 
+
+
+#### Referencias: 
+###### Personajes y puestos
+
+| Personaje |
+|---|---|---|---|
+| Peter Gibbons |
+| Michael Bolton 
+| Samir Nagheenanajar |
+| **Tom Smykowski** |
+| Bill Lumbergh |
+| Dom Portwood |
+| Milton Waddams | 
+| Nina | Initech | 
+| Bob Slydell y Bob Porter | 
+| Joanna |
+
 ## Volvemos a Testing
 
 Ahora imaginemos una empresa que desarrolla la **boletería de cine** que probamos en la actividad anterior.
