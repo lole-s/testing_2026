@@ -64,6 +64,10 @@ Planificación → Análisis → Diseño → Desarrollo → Testing → Publicac
 
 Estas etapas no siempre ocurren una sola vez ni de manera estrictamente lineal. En muchos proyectos se repiten y se superponen.
 
+![Recorrido general del SDLC](img/SDLC.png)
+
+La imagen funciona como una vista rápida del recorrido. No debe interpretarse como una única forma obligatoria de trabajar: según el proyecto, algunas etapas se repiten, se superponen o se realizan en ciclos breves.
+
 ### ¿Siempre se recorre de la misma manera?
 
 No. El SDLC describe **qué cosas hay que hacer**; el modelo de trabajo describe **cómo se organizan**.
