@@ -18,7 +18,14 @@ Cada pareja realiza **una sola entrega en Google Docs**.
 2. Nombra el documento `3-5_Apellido1_Apellido2_AcademyBugs`.
 3. Comprueba que ambos integrantes puedan editarlo.
 4. Copia en el documento las tablas y preguntas de esta guía.
-5. Los dos integrantes registran las observaciones y pegan las capturas en ese mismo documento.
+
+Durante la actividad, trabajen siempre sobre ese mismo documento:
+
+1. Entre los dos elijan un recorrido de la tienda y acuerden qué esperan que suceda antes de probarlo.
+2. Un integrante realiza las acciones en el sitio y el otro registra los pasos, los datos y los resultados.
+3. Cambien los roles en la siguiente prueba para que ambos exploren y registren.
+4. Revisen juntos las observaciones, seleccionen una situación para desarrollar y escriban el reporte entre los dos.
+5. Ambos integrantes agregan las capturas que hayan podido obtener y revisan que la entrega tenga sus nombres.
 
 No es necesario encontrar una cantidad determinada de bugs. Una exploración que confirma que una función trabaja como se esperaba también es un resultado útil.
 
@@ -37,27 +44,6 @@ Para analizar una situación conviene preguntar:
 | Repetición | ¿Otra persona podría probar algo parecido con esta información? |
 
 La repetición ayuda a investigar, pero en una exploración inicial no siempre es posible repetir exactamente un comportamiento. En ese caso, registren lo que observaron y aclaren qué información falta.
-
-### ¿Dónde entra esta actividad dentro del STLC?
-
-El **STLC** (*Software Testing Life Cycle*, ciclo de vida del testing de software) describe cómo se organiza el trabajo de testing. No es un recorrido completamente separado del SDLC: acompaña el desarrollo y ayuda a transformar una necesidad en pruebas, resultados y decisiones.
-
-De manera orientativa, podemos reconocer estas etapas:
-
-```text
-Comprender requisitos → Planificar y diseñar pruebas → Preparar el entorno
-             → Ejecutar → Registrar defectos → Cerrar y comunicar resultados
-```
-
-En esta actividad van a practicar especialmente tres momentos:
-
-- **Ejecutar:** recorrer la aplicación con una intención concreta.
-- **Registrar defectos:** describir qué hicieron, qué esperaban y qué ocurrió.
-- **Comunicar resultados:** aportar evidencia, dudas y datos para que otra persona pueda continuar investigando.
-
-![Ciclo de vida del testing de software (STLC)](img/STLC.png)
-
-El diagrama es una guía orientativa: los nombres y el orden pueden variar según el equipo. Lo importante es entender que reportar un bug no consiste solamente en decir que algo “anda mal”, sino en comunicar evidencia útil.
 
 ### Tipos de bugs
 
@@ -143,16 +129,6 @@ No es necesario completar todos los campos si no cuentan con esa información. I
 **Evidencia y dudas:** Adjuntamos una captura del carrito. Faltaría comprobar si ocurre con otros productos.
 
 El modelo es una orientación, no un formato para copiar literalmente. Un reporte puede estar incompleto y seguir siendo útil si deja claro qué se hizo y qué se observó.
-
-## Compartir y mejorar
-
-Intercambien el reporte con otra pareja o léanlo en voz alta dentro del grupo. La otra pareja intenta entenderlo y responde:
-
-- ¿Qué parte se entiende con claridad?
-- ¿Qué dato o paso ayudaría a comprenderlo mejor?
-- ¿Qué quedó como duda?
-
-Si tienen tiempo, mejoren una parte del reporte a partir de esa devolución. No es necesario lograr una reproducción idéntica: el objetivo es practicar cómo comunicar una observación y cómo pedir la información que falta.
 
 ## Cierre y entrega
 
