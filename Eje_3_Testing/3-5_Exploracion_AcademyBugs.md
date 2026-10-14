@@ -1,4 +1,4 @@
-# Clase 5: Exploración y comunicación de bugs - AcademyBugs
+# 3-5 Exploración y comunicación de bugs - AcademyBugs
 
 **Pregunta guía:** ¿cómo podemos pasar de “esto funciona raro” a una explicación que ayude a otra persona?
 
