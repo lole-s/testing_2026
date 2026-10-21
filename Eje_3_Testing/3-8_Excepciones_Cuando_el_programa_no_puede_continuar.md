@@ -200,7 +200,7 @@ Respondan:
 
 ### Actividad complementaria para quienes terminan antes
 
-Abrimos [Desafío 3-8: ¿qué ocurre?](recursos/3-8_Desafio_excepciones.html).
+Abrimos [Desafío 3-8: ¿qué ocurre?](https://lole-s.github.io/testing_2026/Eje_3_Testing/recursos/3-8_Desafio_excepciones.html).
 
 La actividad presenta ocho tarjetas. En cada una deben leer un fragmento, anticipar qué ocurrirá y elegir una respuesta. Después de responder aparece una explicación del tipo de excepción o del recorrido correcto. No requiere cuenta y también funciona sin conexión.
 
