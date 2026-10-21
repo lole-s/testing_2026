@@ -1,0 +1,4 @@
+# Archivos que GitHub Pages no debe publicar.
+exclude:
+  - "*.md"
+  - "**/*.md"
