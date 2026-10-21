@@ -18,7 +18,8 @@ En este eje aprenderemos a comprobar el comportamiento de un producto, diseñar 
 - [Laboratorio de la clase 3-6: Funciones bajo sospecha](practicas/funciones_3_6.py)
 - [Práctica complementaria de la clase 3-7](practicas/practica_3_7_assert.py)
 - [Actividad individual 3-7 para imprimir](recursos/3-7_Actividad_individual_assert.pdf)
-- [Práctica 3-8: Reparto del botín](practicas/practica_3_8_excepciones.py)
+- [Práctica 3-8: Selector de misiones](practicas/practica_3_8_excepciones.py)
+- [Desafío interactivo 3-8: ¿qué ocurre?](recursos/3-8_Desafio_excepciones.html)
 
 ## Evidencias de trabajo
 

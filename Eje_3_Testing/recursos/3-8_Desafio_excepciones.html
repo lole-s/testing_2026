@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Desafío 3-8 · ¿Qué ocurre?</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #172033;
+      --muted: #526174;
+      --blue: #1d5f9f;
+      --blue-dark: #173f73;
+      --blue-soft: #eaf3fb;
+      --line: #b8c8da;
+      --good: #176b42;
+      --good-bg: #eaf7f0;
+      --bad: #9d2f3b;
+      --bad-bg: #fff0f2;
+      --paper: #ffffff;
+      --page: #eef3f8;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--page);
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    main {
+      width: min(760px, calc(100% - 28px));
+      margin: 0 auto;
+      padding: 28px 0 40px;
+    }
+
+    header { margin-bottom: 18px; }
+
+    h1 {
+      margin: 0 0 6px;
+      color: var(--blue-dark);
+      font-size: clamp(1.65rem, 5vw, 2.4rem);
+    }
+
+    header p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.45;
+    }
+
+    .panel {
+      min-width: 0;
+      padding: clamp(18px, 4vw, 30px);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: var(--paper);
+      box-shadow: 0 12px 30px rgb(38 63 88 / 10%);
+    }
+
+    .status {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 8px;
+      color: var(--muted);
+      font-size: 0.92rem;
+      font-weight: 700;
+    }
+
+    .track {
+      height: 8px;
+      margin-bottom: 24px;
+      overflow: hidden;
+      border-radius: 99px;
+      background: #dce6ef;
+    }
+
+    .progress {
+      width: 0;
+      height: 100%;
+      border-radius: inherit;
+      background: var(--blue);
+      transition: width 180ms ease;
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      color: var(--blue-dark);
+      font-size: 1.25rem;
+    }
+
+    h1, h2, header p, .option, .feedback {
+      overflow-wrap: anywhere;
+    }
+
+    pre {
+      margin: 0 0 20px;
+      padding: 17px;
+      overflow-x: auto;
+      border: 1px solid #c7d5e3;
+      border-radius: 10px;
+      background: #f6f8fb;
+      font: 1rem/1.5 Consolas, "Courier New", monospace;
+      white-space: pre-wrap;
+    }
+
+    .answers {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    button {
+      border: 1px solid #8ca5bd;
+      border-radius: 10px;
+      background: #fff;
+      color: var(--ink);
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .option {
+      min-height: 50px;
+      padding: 11px 13px;
+      text-align: left;
+    }
+
+    button:hover:not(:disabled),
+    button:focus-visible {
+      border-color: var(--blue);
+      outline: 3px solid rgb(29 95 159 / 18%);
+    }
+
+    button:disabled { cursor: default; }
+    .option.correct { border-color: var(--good); background: var(--good-bg); color: var(--good); }
+    .option.incorrect { border-color: var(--bad); background: var(--bad-bg); color: var(--bad); }
+
+    .feedback {
+      display: none;
+      margin-top: 18px;
+      padding: 14px 16px;
+      border-left: 5px solid var(--blue);
+      border-radius: 8px;
+      background: var(--blue-soft);
+      line-height: 1.48;
+    }
+
+    .feedback.visible { display: block; }
+    .feedback.good { border-color: var(--good); background: var(--good-bg); }
+    .feedback.bad { border-color: var(--bad); background: var(--bad-bg); }
+    .feedback strong { display: block; margin-bottom: 4px; }
+
+    .next, .restart {
+      display: none;
+      width: 100%;
+      margin-top: 16px;
+      padding: 13px 18px;
+      border-color: var(--blue);
+      background: var(--blue);
+      color: #fff;
+      text-align: center;
+    }
+
+    .next.visible, .restart.visible { display: block; }
+
+    .finish { display: none; text-align: center; }
+    .finish.visible { display: block; }
+    .finish .score {
+      margin: 10px 0;
+      color: var(--blue-dark);
+      font-size: clamp(2.3rem, 10vw, 4rem);
+      font-weight: 800;
+    }
+    .finish p { color: var(--muted); line-height: 1.5; }
+
+    .note {
+      margin-top: 16px;
+      color: var(--muted);
+      font-size: 0.88rem;
+      text-align: center;
+    }
+
+    @media (max-width: 560px) {
+      .answers { grid-template-columns: 1fr; }
+      main { padding-top: 18px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Desafío 3-8: ¿qué ocurre?</h1>
+      <p>Leé cada fragmento antes de responder. Después de elegir vas a encontrar una explicación del resultado.</p>
+    </header>
+
+    <section class="panel" aria-live="polite">
+      <div id="quiz">
+        <div class="status">
+          <span id="counter">Tarjeta 1 de 8</span>
+          <span id="points">Puntos: 0</span>
+        </div>
+        <div class="track" aria-hidden="true"><div id="progress" class="progress"></div></div>
+
+        <h2 id="question">¿Qué sucede al ejecutar este código?</h2>
+        <pre><code id="code"></code></pre>
+        <div id="answers" class="answers"></div>
+        <div id="feedback" class="feedback"></div>
+        <button id="next" class="next" type="button">Siguiente tarjeta</button>
+      </div>
+
+      <div id="finish" class="finish">
+        <h2>Desafío terminado</h2>
+        <div id="final-score" class="score">0 / 8</div>
+        <p id="final-message"></p>
+        <button id="restart" class="restart visible" type="button">Volver a jugar</button>
+      </div>
+    </section>
+
+    <p class="note">No se guardan datos y no hace falta iniciar sesión.</p>
+  </main>
+
+  <script>
+    const cards = [
+      {
+        code: 'numero = int("tres")\nprint(numero)',
+        options: ['ValueError', 'TypeError', 'NameError', 'No ocurre una excepción'],
+        answer: 'ValueError',
+        explanation: 'ValueError aparece porque int() puede recibir texto, pero "tres" no tiene el formato de un número entero. Python no puede realizar la conversión.'
+      },
+      {
+        code: 'por_persona = 12000 / 0\nprint(por_persona)',
+        options: ['IndexError', 'ZeroDivisionError', 'AssertionError', 'No ocurre una excepción'],
+        answer: 'ZeroDivisionError',
+        explanation: 'ZeroDivisionError aparece cuando una división tiene cero como divisor. La operación no puede completarse y el print no llega a ejecutarse.'
+      },
+      {
+        code: 'misiones = ["Robot", "Laboratorio", "Contraseña"]\nprint(misiones[5])',
+        options: ['ValueError', 'IndexError', 'TypeError', 'No ocurre una excepción'],
+        answer: 'IndexError',
+        explanation: 'IndexError indica que se pidió una posición inexistente. Esta lista tiene las posiciones 0, 1 y 2; la posición 5 queda fuera de la lista.'
+      },
+      {
+        code: 'vidas = 0\nassert vidas > 0, "El jugador debe tener vidas"',
+        options: ['AssertionError', 'ZeroDivisionError', 'NameError', 'No ocurre una excepción'],
+        answer: 'AssertionError',
+        explanation: 'AssertionError aparece porque la condición vidas > 0 es falsa. El mensaje ayuda a reconocer qué expectativa no se cumplió.'
+      },
+      {
+        code: 'resultado = "5" + 2\nprint(resultado)',
+        options: ['ValueError', 'TypeError', 'IndexError', 'No ocurre una excepción'],
+        answer: 'TypeError',
+        explanation: 'TypeError aparece porque la suma recibe tipos incompatibles: un texto y un número entero. Python no decide automáticamente cómo combinarlos.'
+      },
+      {
+        code: 'print(puntaje)\npuntaje = 100',
+        options: ['NameError', 'AssertionError', 'ValueError', 'No ocurre una excepción'],
+        answer: 'NameError',
+        explanation: 'NameError aparece porque puntaje se usa antes de haber sido definido. La asignación de la segunda línea no llega a ejecutarse.'
+      },
+      {
+        code: 'numero = int("25")\nprint(numero + 5)',
+        options: ['ValueError', 'TypeError', 'ZeroDivisionError', 'No ocurre una excepción'],
+        answer: 'No ocurre una excepción',
+        explanation: 'No ocurre una excepción. "25" tiene un formato válido para int(), se convierte en 25 y el programa muestra 30.'
+      },
+      {
+        code: 'try:\n    print(10 / 2)\nexcept ZeroDivisionError:\n    print("No se puede dividir")\n\nprint("Fin")',
+        options: ['Muestra 5.0 y luego Fin', 'Muestra No se puede dividir', 'Produce ZeroDivisionError', 'Produce ValueError'],
+        answer: 'Muestra 5.0 y luego Fin',
+        explanation: 'La división es válida, por eso el except se salta. El programa muestra 5.0 y después continúa con la instrucción print("Fin").'
+      }
+    ];
+
+    let current = 0;
+    let score = 0;
+    let answered = false;
+
+    const quiz = document.querySelector('#quiz');
+    const finish = document.querySelector('#finish');
+    const counter = document.querySelector('#counter');
+    const points = document.querySelector('#points');
+    const progress = document.querySelector('#progress');
+    const code = document.querySelector('#code');
+    const answers = document.querySelector('#answers');
+    const feedback = document.querySelector('#feedback');
+    const next = document.querySelector('#next');
+    const finalScore = document.querySelector('#final-score');
+    const finalMessage = document.querySelector('#final-message');
+    const restart = document.querySelector('#restart');
+
+    function renderCard() {
+      answered = false;
+      const card = cards[current];
+      counter.textContent = `Tarjeta ${current + 1} de ${cards.length}`;
+      points.textContent = `Puntos: ${score}`;
+      progress.style.width = `${(current / cards.length) * 100}%`;
+      code.textContent = card.code;
+      answers.replaceChildren();
+      feedback.className = 'feedback';
+      feedback.textContent = '';
+      next.className = 'next';
+
+      card.options.forEach((option) => {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'option';
+        button.textContent = option;
+        button.addEventListener('click', () => answerCard(option, button));
+        answers.appendChild(button);
+      });
+    }
+
+    function answerCard(selected, selectedButton) {
+      if (answered) return;
+      answered = true;
+
+      const card = cards[current];
+      const correct = selected === card.answer;
+      if (correct) score += 1;
+
+      [...answers.children].forEach((button) => {
+        button.disabled = true;
+        if (button.textContent === card.answer) button.classList.add('correct');
+      });
+      if (!correct) selectedButton.classList.add('incorrect');
+
+      feedback.className = `feedback visible ${correct ? 'good' : 'bad'}`;
+      feedback.innerHTML = `<strong>${correct ? 'Correcto.' : `No. La respuesta correcta es ${card.answer}.`}</strong>${card.explanation}`;
+      points.textContent = `Puntos: ${score}`;
+      progress.style.width = `${((current + 1) / cards.length) * 100}%`;
+      next.textContent = current === cards.length - 1 ? 'Ver resultado' : 'Siguiente tarjeta';
+      next.className = 'next visible';
+      next.focus();
+    }
+
+    function showFinish() {
+      quiz.hidden = true;
+      finish.classList.add('visible');
+      finalScore.textContent = `${score} / ${cards.length}`;
+      finalMessage.textContent = score === cards.length
+        ? 'Excelente: reconociste todos los recorridos.'
+        : score >= 6
+          ? 'Muy bien. Revisá las explicaciones de las tarjetas que no coincidieron.'
+          : 'Conviene volver a jugar y leer cada fragmento línea por línea.';
+      restart.focus();
+    }
+
+    next.addEventListener('click', () => {
+      if (current === cards.length - 1) {
+        showFinish();
+        return;
+      }
+      current += 1;
+      renderCard();
+    });
+
+    restart.addEventListener('click', () => {
+      current = 0;
+      score = 0;
+      quiz.hidden = false;
+      finish.classList.remove('visible');
+      renderCard();
+    });
+
+    renderCard();
+  </script>
+</body>
+</html>

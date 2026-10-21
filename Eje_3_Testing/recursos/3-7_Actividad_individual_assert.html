@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Actividad individual 3-7 - El recorrido de los assert</title>
+  <style>
+    @page { size: A4; margin: 12mm 14mm; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: #172033;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 10.5pt;
+      line-height: 1.28;
+    }
+    h1 {
+      margin: 0 0 2mm;
+      color: #173f73;
+      font-size: 19pt;
+      line-height: 1.05;
+    }
+    .subtitle {
+      margin-bottom: 4mm;
+      color: #42526a;
+      font-size: 10pt;
+    }
+    .student {
+      display: grid;
+      grid-template-columns: 3fr 1fr;
+      gap: 5mm;
+      margin-bottom: 4mm;
+    }
+    .field {
+      min-height: 7mm;
+      border-bottom: 1px solid #53657d;
+      padding-top: 2mm;
+    }
+    .prompt {
+      margin: 0 0 2.5mm;
+      padding: 2.5mm 3mm;
+      border-left: 4px solid #2d6fb3;
+      background: #eef5fb;
+    }
+    pre {
+      margin: 0 0 3.5mm;
+      padding: 3mm 4mm;
+      border: 1px solid #b8c8da;
+      border-radius: 2mm;
+      background: #f7f9fc;
+      font: 9.2pt/1.32 Consolas, "Courier New", monospace;
+      white-space: pre-wrap;
+    }
+    h2 {
+      margin: 3mm 0 1.5mm;
+      color: #173f73;
+      font-size: 12pt;
+    }
+    ol { margin: 1.5mm 0 3mm 5mm; padding-left: 4mm; }
+    li { margin-bottom: 1mm; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      font-size: 9.2pt;
+    }
+    th, td {
+      border: 1px solid #6d7d91;
+      padding: 1.8mm 1.5mm;
+      vertical-align: middle;
+    }
+    th {
+      background: #dceaf7;
+      color: #173f73;
+      font-size: 8.8pt;
+    }
+    td { height: 6.8mm; }
+    td.code {
+      font-family: Consolas, "Courier New", monospace;
+      font-size: 8.7pt;
+    }
+    .questions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3mm 6mm;
+      margin-top: 3mm;
+    }
+    .question {
+      min-height: 18mm;
+      border-bottom: 1px solid #8796a8;
+    }
+    .question strong { color: #173f73; }
+    .rubric {
+      margin-top: 3mm;
+      padding: 2.5mm 3mm;
+      border: 1px solid #9fb5cc;
+      border-left: 4px solid #2d6fb3;
+      background: #f4f8fc;
+      color: #26364a;
+      font-size: 8.8pt;
+      line-height: 1.3;
+    }
+    .rubric strong { color: #173f73; }
+  </style>
+</head>
+<body>
+  <h1>Actividad individual 3-7</h1>
+  <div class="subtitle">El recorrido de los <code>assert</code> · Testing</div>
+
+  <div class="student">
+    <div class="field">Nombre y apellido:</div>
+    <div class="field">Fecha:</div>
+  </div>
+
+  <p class="prompt"><strong>Trabajá sin ejecutar el código.</strong> En la segunda columna escribí el valor que obtiene el lado izquierdo de <code>==</code>. Después decidí si coincide con el valor esperado. Cuando un <code>assert</code> falla, Python se detiene.</p>
+
+  <pre>jugador = "Luna"          monedas = 7          vidas = 2
+nivel = 3                 inventario = ["llave", "mapa", "pocion"]
+
+puntaje = monedas * 10 + nivel * 5
+
+assert jugador == "Luna"
+assert puntaje == 85
+assert monedas + vidas * nivel == 13
+assert len(inventario) + vidas == 5
+assert puntaje - monedas * 10 == 10
+assert nivel * vidas == 6
+
+print("Todas las comprobaciones pasaron")</pre>
+
+  <h2>1. Seguí el recorrido</h2>
+  <table>
+    <colgroup>
+      <col style="width:50%">
+      <col style="width:25%">
+      <col style="width:25%">
+    </colgroup>
+    <thead>
+      <tr>
+        <th>Expresión comprobada</th>
+        <th>Valor del lado izquierdo</th>
+        <th>¿Pasa o falla?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td class="code">jugador == "Luna"</td><td></td><td></td></tr>
+      <tr><td class="code">puntaje == 85</td><td></td><td></td></tr>
+      <tr><td class="code">monedas + vidas * nivel == 13</td><td></td><td></td></tr>
+      <tr><td class="code">len(inventario) + vidas == 5</td><td></td><td></td></tr>
+      <tr><td class="code">puntaje - monedas * 10 == 10</td><td></td><td></td></tr>
+      <tr><td class="code">nivel * vidas == 6</td><td></td><td></td></tr>
+    </tbody>
+  </table>
+
+  <h2>2. Explicá lo que ocurrirá</h2>
+  <div class="questions">
+    <div class="question"><strong>a.</strong> ¿Cuál es el primer <code>assert</code> que falla y qué valor obtuvo?</div>
+    <div class="question"><strong>b.</strong> ¿Qué instrucciones quedan sin ejecutar?</div>
+    <div class="question"><strong>c.</strong> Cambiá un único número para que todas las comprobaciones pasen.</div>
+    <div class="question"><strong>d.</strong> Si <code>vidas</code> valiera <code>3</code>, ¿qué comprobaciones cambiarían?</div>
+  </div>
+
+  <div class="rubric">
+    <strong>Recordatorio sobre <code>assert</code></strong> &nbsp;·&nbsp;
+    <code>assert condición, "mensaje opcional"</code><br>
+    Comprueba que una condición que debería ser verdadera se cumpla durante la ejecución.
+    La condición puede ser cualquier expresión cuyo resultado sea <code>True</code> o <code>False</code>.
+    Si es <code>True</code>, el programa continúa sin mostrar nada. Si es <code>False</code>, se produce
+    <code>AssertionError</code>, se muestra el mensaje opcional y esa ejecución se detiene.
+  </div>
+</body>
+</html>
+
